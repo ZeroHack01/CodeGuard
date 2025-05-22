@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #00ff00;
+    }
+    h1 {
+      text-align: center;
+      color: #00ff00;
+    }
+    input[type="file"], button {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      background: black;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      padding: 0.5rem;
+    }
+    ul {
+
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      border-bottom: 1px dashed #00ff00;
+      padding: 0.5rem 0;
+    }
+    code {
+      display: block;
+      background: #000000;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      color: #00ff00;
+    }
+    .success {
+      color: #00ff00;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💀 Bug Bounty Scanner 💀</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="codefile" required>
+      <button type="submit">Scan Now</button>
+    </form>
+
+    {% if filename %}
+      <h3>🧾 Results for: {{ filename }}</h3>
+      {% if issues %}
+        <ul>
+          {% for line_num, line, message in issues %}
+            <li>
+              <strong>Line {{ line_num }}:</strong> {{ message }}
+              <code>{{ line }}</code>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="success">✅ No issues found. Clean code!</p>
+      {% endif %}
+    {% endif %}
+  </div>
+</body>
+</html>
