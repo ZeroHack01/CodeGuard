@@ -2,460 +2,264 @@
 
 <div align="center">
 
-![CodeGuard Banner](https://img.shields.io/badge/CodeGuard-Multi--Language%20Security%20Scanner-blue?style=for-the-badge&logo=shield&logoColor=white)
+![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=CodeGuard&fontSize=80&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Multi-Language%20Security%20Scanner&descAlignY=51&descSize=20)
 
-**🔍 Web-Based Code Vulnerability Scanner with GUI Interface**
+**🚀 Drag. Drop. Secure. All in your browser.**
 
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-Web%20Framework-green.svg?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![Multi-Language](https://img.shields.io/badge/Languages-8%20Supported-orange.svg?style=flat-square&logo=code&logoColor=white)](https://github.com/ZeroHack01/CodeGuard)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
-
-*Upload • Scan • Secure - All through your browser* 🌐
-
-[🚀 **Quick Start**](#-quick-start) • [🖥️ **Screenshots**](#️-screenshots) • [🔧 **Usage**](#-usage) • [🤝 **Contributing**](#-contributing)
+[![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Security](https://img.shields.io/badge/Security-FF6B6B?style=for-the-badge&logo=shield&logoColor=white)](#)
 
 </div>
 
 ---
 
-## 🌟 **What is CodeGuard?**
-
-**CodeGuard** is a powerful web-based code security scanner that detects vulnerabilities across multiple programming languages through an intuitive GUI interface. Built with Flask, it provides an easy-to-use platform for developers to upload and analyze their code files for common security issues.
-
-### ✨ **Why CodeGuard?**
-
-- 🌐 **Web-Based Interface** - No installation required, runs in your browser
-- 🔍 **Multi-Language Support** - Scans 8+ programming languages
-- ⚡ **Real-Time Analysis** - Instant vulnerability detection
-- 📊 **Detailed Reports** - Line-by-line issue breakdown
-- 🎯 **Pattern-Based Detection** - Uses regex patterns for accurate scanning
-- 🔒 **Security Focused** - Identifies common OWASP vulnerabilities
-
----
-
-## 🚀 **Supported Languages & Detection**
+## ⚡ What is CodeGuard?
 
 <table>
 <tr>
-<td width="33%">
+<td width="60%">
 
-### 🐍 **Python**
-- ⚠️ `eval()` - Code Injection
-- ⚠️ `exec()` - Dangerous Execution
-- ⚠️ `os.system()` - Shell Execution
-- ⚠️ `subprocess` calls
-- ⚠️ Hardcoded passwords
-- ✅ **Syntax Error Detection**
+**CodeGuard** is a lightning-fast web-based vulnerability scanner that analyzes your code in seconds. Upload any file, get instant security insights.
 
-</td>
-<td width="33%">
-
-### 🟨 **JavaScript**
-- ⚠️ `document.write()` - XSS risk
-- ⚠️ `eval()` - Code Injection
-- ⚠️ DOM manipulation risks
-- ⚠️ Unsafe HTML insertion
-
-### 🌐 **PHP**
-- ⚠️ `eval()` - Code Injection
-- ⚠️ Hardcoded DB passwords
-- ⚠️ SQL injection patterns
-- ⚠️ File inclusion vulnerabilities
+**🎯 Perfect for:**
+- 🔍 Quick security audits
+- 🎓 Learning secure coding  
+- 🛡️ Pre-commit checks
+- 📊 Code reviews
 
 </td>
-<td width="33%">
+<td width="40%">
 
-### 🐚 **Shell Scripts**
-- ⚠️ Dangerous `eval` usage
-- ⚠️ `rm -rf` commands
-- ⚠️ `curl | bash` patterns
-- ⚠️ Unsafe variable expansion
-
-### ☕ **Java**
-- ⚠️ `Runtime.exec()` - Shell Execution
-- ⚠️ Hardcoded credentials
-- ⚠️ SQL injection risks
+```python
+# Just upload and scan!
+def vulnerable_code():
+    password = "admin123"  # ⚠️ Detected!
+    eval(user_input)       # ⚠️ Detected!
+    return "Scanned ✅"
+```
 
 </td>
 </tr>
 </table>
 
+---
+
+## 🚀 **Quick Start**
+
 <div align="center">
 
-### **Also Supports:** C/C++ • HTML • And More!
+### 3 Steps to Secure Code
+
+```mermaid
+graph LR
+    A[📁 Upload File] --> B[⚡ Auto Scan]
+    B --> C[🛡️ Get Results]
+    
+    style A fill:#ff6b6b,stroke:#fff,stroke-width:2px,color:#fff
+    style B fill:#4ecdc4,stroke:#fff,stroke-width:2px,color:#fff  
+    style C fill:#45b7d1,stroke:#fff,stroke-width:2px,color:#fff
+```
 
 </div>
 
----
-
-## 🎯 **Quick Start**
-
-### 📋 **Prerequisites**
-
 ```bash
-# Ensure Python 3.7+ is installed
-python --version
-
-# Install Flask (if not already installed)
-pip install flask
-```
-
-### 🔧 **Installation & Setup**
-
-```bash
-# Clone the repository
+# Clone & Run
 git clone https://github.com/ZeroHack01/CodeGuard.git
-cd CodeGuard
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
+cd CodeGuard && pip install flask
 python app.py
-```
 
-### 🌐 **Access the Web Interface**
-
-```bash
-# Open your browser and navigate to:
-http://localhost:5000
+# Open browser → localhost:5000 🌐
 ```
 
 ---
 
-## 🔧 **Usage**
-
-### 📤 **File Upload Process**
-
-1. **🌐 Open your browser** and go to `http://localhost:5000`
-2. **📁 Click "Choose File"** and select your code file
-3. **🚀 Click "Upload & Scan"** to start the analysis
-4. **📊 View Results** with detailed line-by-line vulnerability reports
-
-### 🎯 **Supported File Extensions**
-
-```
-✅ Python     (.py)
-✅ JavaScript (.js)  
-✅ PHP        (.php)
-✅ HTML       (.html)
-✅ Shell      (.sh)
-✅ Java       (.java)
-✅ C/C++      (.c, .cpp)
-```
-
-### 📊 **Example Scan Results**
-
-```
-🧾 Results for: vulnerable_code.py (Language: PYTHON)
-
-Line 15: password = "admin123"
-⚠️ Issue: Hardcoded password
-
-Line 23: eval(user_input)
-⚠️ Issue: eval() - Code Injection
-
-Line 31: os.system(command)
-⚠️ Issue: os.system() - Shell Execution
-
-✅ Scan completed: 3 vulnerabilities found
-```
-
----
-
-## 🏗️ **Project Structure**
-
-```
-CodeGuard/
-├── 📄 app.py              # Main Flask application
-├── 🔍 scanner.py          # Core scanning engine
-├── 📁 templates/
-│   └── 🌐 index.html     # Web interface
-├── 📁 static/
-│   ├── 🎨 style.css      # Custom styling
-│   └── ⚡ script.js      # Frontend logic
-├── 📁 uploads/            # Temporary file storage
-├── 📋 requirements.txt    # Python dependencies
-└── 📖 README.md          # This file
-```
-
----
-
-## ⚙️ **Core Features**
-
-### 🔍 **Pattern-Based Scanning Engine**
-
-The scanner uses regex patterns to identify vulnerabilities:
-
-```python
-# Example: Python vulnerability patterns
-'python': {
-    "eval() - Code Injection": r"\beval\s*\(",
-    "exec() - Dangerous Execution": r"\bexec\s*\(",
-    "os.system() - Shell Execution": r"os\.system\s*\(",
-    "subprocess call": r"subprocess\.(call|run|Popen)",
-    "Hardcoded password": r"password\s*=\s*[\"'].*[\"']"
-}
-```
-
-### 🎨 **Web Interface Features**
-
-- **🔄 Drag & Drop** file upload
-- **📊 Real-time** scan progress
-- **🎯 Syntax highlighting** for detected issues  
-- **📱 Responsive design** for mobile/desktop
-- **🌈 Color-coded** severity levels
-
-### 🔧 **Language Detection**
-
-Automatic language detection based on file extensions:
-
-```python
-def get_language(file_path):
-    ext = file_path.split('.')[-1].lower()
-    return {
-        'py': 'python',
-        'js': 'javascript', 
-        'php': 'php',
-        'html': 'html',
-        'sh': 'shell',
-        'java': 'java',
-        'c': 'c',
-        'cpp': 'cpp'
-    }.get(ext, 'unknown')
-```
-
----
-
-## 🛠️ **Advanced Configuration**
-
-### 🔧 **Adding Custom Patterns**
-
-You can extend the scanner by adding custom vulnerability patterns:
-
-```python
-# In scanner.py - add new patterns
-'python': {
-    "Custom SQL Injection": r"cursor\.execute\s*\(\s*[\"'].*%.*[\"']",
-    "Unsafe pickle usage": r"\bpickle\.loads?\s*\(",
-    # Add your custom patterns here
-}
-```
-
-### 🎛️ **Modifying File Extensions**
-
-```python
-# In app.py - extend supported extensions
-ALLOWED_EXTENSIONS = {
-    'py', 'js', 'php', 'html', 'sh', 'java', 'c', 'cpp',
-    'rb', 'go', 'rs'  # Add Ruby, Go, Rust support
-}
-```
-
----
-
-## 🖥️ **Screenshots**
+## 🎯 **Language Support**
 
 <div align="center">
 
-### 🏠 **Main Interface**
-*Clean, intuitive file upload interface*
+| 🐍 Python | 🟨 JavaScript | 🌐 PHP | ☕ Java |
+|-----------|---------------|---------|---------|
+| `eval()` injection | XSS patterns | Code execution | Shell commands |
+| Hardcoded secrets | DOM manipulation | DB passwords | Unsafe Runtime calls |
+| **✅ Syntax Check** | Unsafe functions | File inclusion | Credential leaks |
 
-### 📊 **Scan Results**  
-*Detailed vulnerability reports with line numbers*
-
-### 🎯 **Multi-Language Support**
-*Automatic language detection and specialized scanning*
+| 🐚 Shell | 💻 C/C++ | 📄 HTML | 🔧 More |
+|----------|----------|---------|---------|
+| `rm -rf` danger | Buffer overflows | Script injection | **Coming Soon** |
+| `curl \| bash` | `system()` calls | Inline scripts | Ruby, Go, Rust |
 
 </div>
 
 ---
 
-## 🚀 **Future Enhancements**
+## 📊 **Live Demo**
 
-### 🔮 **Planned Features**
+<details>
+<summary><b>🎬 See CodeGuard in Action</b></summary>
 
-- **🔧 Semgrep Integration** - Professional SAST tool integration
-- **📄 Report Export** - PDF/JSON/CSV export functionality  
-- **🔄 Batch Scanning** - Multiple file upload support
-- **🎨 Syntax Highlighting** - Code editor with inline issue markers
-- **📊 Dashboard** - Vulnerability statistics and trends
-- **🔌 API Support** - REST API for programmatic access
+```
+🌐 Upload: vulnerable_app.py
+⚡ Scanning...
 
-### 🛡️ **Enhanced Security Patterns**
+╭─────────────────────────────────────╮
+│  🛡️  CodeGuard Results             │
+├─────────────────────────────────────┤
+│  📁 File: vulnerable_app.py         │
+│  🔍 Language: PYTHON                │
+│  ⏱️  Scan time: 0.8s                │
+╰─────────────────────────────────────╯
+
+🚨 Issues Found:
+
+Line 12: password = "secret123"
+⚠️  Hardcoded password
+
+Line 18: eval(request.args.get('cmd'))  
+🔥 Code injection - CRITICAL
+
+Line 25: os.system(user_command)
+⚠️  Shell execution risk
+
+✅ Scan complete: 3 vulnerabilities detected
+```
+
+</details>
+
+---
+
+## 🎨 **Features**
+
+<div align="center">
+
+🌐 **Web Interface** • ⚡ **Instant Results** • 🎯 **8+ Languages** • 🔍 **25+ Patterns**
+
+</div>
+
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/fluency/48/upload-to-cloud.png"/>
+<br><b>🚀 Drag & Drop</b>
+<br>Simple file upload
+</td>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/fluency/48/source-code.png"/>
+<br><b>🧠 Smart Detection</b>
+<br>Language auto-detection
+</td>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/fluency/48/security-checked.png"/>
+<br><b>🛡️ Security Focus</b>
+<br>OWASP-based patterns
+</td>
+<td align="center" width="25%">
+<img src="https://img.icons8.com/fluency/48/speed.png"/>
+<br><b>⚡ Lightning Fast</b>
+<br>Results in seconds
+</td>
+</tr>
+</table>
+
+---
+
+## 🔧 **Extend CodeGuard**
+
+<details>
+<summary><b>💡 Add Custom Patterns</b></summary>
 
 ```python
-# Coming soon - Advanced detection patterns
-'advanced_patterns': {
-    "LDAP Injection": r"ldap.*filter.*\+.*user_input",
-    "XXE Vulnerability": r"XMLParser.*external.*entities",
-    "SSRF Detection": r"requests\.(get|post).*user_input",
-    "Insecure Deserialization": r"pickle\.loads?|yaml\.load\("
+# scanner.py - Add your patterns
+'python': {
+    "🔥 Custom SQL Injection": r"cursor\.execute.*%.*user",
+    "⚠️ Unsafe pickle": r"\bpickle\.loads?\s*\(",
+    "🚨 Your pattern here": r"your_regex_pattern"
 }
 ```
+
+</details>
+
+<details>
+<summary><b>🌍 Add New Languages</b></summary>
+
+```python
+# app.py - Extend support
+ALLOWED_EXTENSIONS = {'py', 'js', 'php', 'rb', 'go'}
+
+# scanner.py - Add patterns
+'ruby': {
+    "🔥 Ruby eval": r"\beval\s*\(",
+    "⚠️ System call": r"system\s*\("
+}
+```
+
+</details>
+
+---
+
+## 🏗️ **Architecture**
+
+<div align="center">
+
+```
+   Browser 🌐
+      ↓
+   Flask App ⚡
+      ↓
+  Scanner Engine 🔍
+      ↓
+  Pattern Matching 🎯
+      ↓
+   Results 📊
+```
+
+</div>
 
 ---
 
 ## 🤝 **Contributing**
 
-We welcome contributions! Here's how you can help:
+<div align="center">
 
-### 🌟 **Ways to Contribute**
+**🌟 Help make CodeGuard better!**
 
-- 🐛 **Report Bugs** - Found an issue? Let us know!
-- 💡 **Feature Requests** - Suggest new scanning patterns
-- 🔧 **Code Improvements** - Submit pull requests
-- 📖 **Documentation** - Help improve our docs
-- 🧪 **Testing** - Test with different file types
+[![Issues](https://img.shields.io/github/issues/ZeroHack01/CodeGuard?style=flat-square&logo=github&color=red)](https://github.com/ZeroHack01/CodeGuard/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/ZeroHack01/CodeGuard/pulls)
 
-### 🚀 **Development Setup**
+**💡 Ideas:** Security patterns • New languages • UI improvements • Bug fixes
 
-```bash
-# Fork the repository
-git clone https://github.com/YOUR-USERNAME/CodeGuard.git
-cd CodeGuard
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run in development mode
-export FLASK_ENV=development  # On Windows: set FLASK_ENV=development
-python app.py
-```
-
-### 📝 **Adding New Language Support**
-
-1. **Update `ALLOWED_EXTENSIONS`** in `app.py`
-2. **Add language mapping** in `get_language()` function
-3. **Define vulnerability patterns** in `scanner.py`
-4. **Test with sample files**
-5. **Submit pull request**
+</div>
 
 ---
 
-## 🔧 **Technical Details**
-
-### 🏗️ **Architecture**
+## 📈 **Roadmap**
 
 ```mermaid
-graph TB
-    A[Web Browser] -->|Upload File| B[Flask App]
-    B -->|Save File| C[Upload Directory]
-    B -->|Process File| D[Scanner Engine]
-    D -->|Regex Patterns| E[Language Detection]
-    D -->|Vulnerability Check| F[Pattern Matching] 
-    F -->|Results| G[Issue List]
-    G -->|Display| A
+gantt
+    title CodeGuard Development
+    dateFormat  YYYY-MM-DD
+    section Phase 1
+    Multi-language support     :done, 2024-01-01, 2024-02-01
+    Web interface             :done, 2024-01-15, 2024-02-15
+    section Phase 2  
+    Batch scanning            :active, 2024-03-01, 2024-04-01
+    Report export             :2024-03-15, 2024-04-15
+    section Phase 3
+    API integration           :2024-05-01, 2024-06-01
+    Advanced patterns         :2024-05-15, 2024-06-15
 ```
-
-### 📊 **Performance**
-
-- **⚡ Fast Scanning** - Regex-based pattern matching
-- **💾 Low Memory** - Processes files line by line
-- **🔄 Concurrent** - Can handle multiple uploads
-- **📱 Responsive** - Works on mobile devices
-
-### 🛡️ **Security Considerations**
-
-- **🗂️ File Validation** - Strict extension checking
-- **🔒 Temporary Storage** - Files deleted after scanning
-- **🚫 No Execution** - Static analysis only
-- **📝 Input Sanitization** - Prevents malicious uploads
-
----
-
-## 📊 **Vulnerability Coverage**
-
-<div align="center">
-
-| Category | Examples | Detection |
-|----------|----------|-----------|
-| 🔓 **Injection** | SQL, Code, Command | ✅ |
-| 🔐 **Authentication** | Hardcoded passwords | ✅ |
-| 💾 **Data Exposure** | Sensitive data leaks | ✅ |
-| ⚡ **Execution** | Dangerous functions | ✅ |
-| 🌐 **XSS** | Cross-site scripting | ✅ |
-| 📁 **File Handling** | Path traversal | 🔄 |
-| 🔗 **SSRF** | Server-side requests | 🔄 |
-| 🏗️ **Deserialization** | Unsafe unmarshaling | 🔄 |
-
-**Legend:** ✅ Implemented • 🔄 Planned
-
-</div>
-
----
-
-## 📈 **Usage Statistics**
-
-<div align="center">
-
-```
-📊 Scanner Performance
-├── 🔍 Languages Supported: 8+
-├── ⚡ Average Scan Time: <2 seconds  
-├── 🎯 Pattern Rules: 25+
-├── 📁 Max File Size: 10MB
-└── 🌐 Interface: Responsive Web UI
-```
-
-</div>
-
----
-
-## 🐛 **Known Limitations**
-
-- **📝 Regex-Based** - May have false positives/negatives
-- **🔍 Static Analysis** - Cannot detect runtime vulnerabilities  
-- **📁 Single File** - Currently processes one file at a time
-- **🧠 Context-Unaware** - Limited semantic understanding
-
----
-
-## 📜 **License**
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-Copyright (c) 2024 ZeroHack01
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-```
-
----
-
-## 🙏 **Acknowledgments**
-
-- 🛡️ **OWASP** - For vulnerability classification standards
-- 🐍 **Flask Community** - For the excellent web framework
-- 🔍 **Security Researchers** - For vulnerability pattern insights
-- 👥 **Open Source Community** - For continuous improvements
 
 ---
 
 <div align="center">
 
-### 💬 **Connect With Us**
+## 💫 **Ready to Secure Your Code?**
 
-[![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=for-the-badge&logo=github)](https://github.com/ZeroHack01)
-[![Issues](https://img.shields.io/badge/Issues-Welcome-red?style=for-the-badge&logo=github)](https://github.com/ZeroHack01/CodeGuard/issues)
-[![PRs](https://img.shields.io/badge/PRs-Welcome-green?style=for-the-badge&logo=github)](https://github.com/ZeroHack01/CodeGuard/pulls)
+[![Get Started](https://img.shields.io/badge/Get%20Started-FF6B6B?style=for-the-badge&logo=rocket&logoColor=white)](https://github.com/ZeroHack01/CodeGuard)
+[![Star Repo](https://img.shields.io/badge/⭐%20Star%20Repo-FFD93D?style=for-the-badge&logo=github&logoColor=black)](https://github.com/ZeroHack01/CodeGuard)
 
-**🔒 Securing code, one scan at a time**
+**Made with ❤️ by [@ZeroHack01](https://github.com/ZeroHack01)**
 
-⭐ **Star this repo if CodeGuard helped secure your code!** ⭐
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer)
 
-</div>
-
----
-
-<div align="center">
-<sub>
-Built with ❤️ using Flask • Multi-language security scanner • 
-Free and open source • Always improving
-</sub>
 </div>
