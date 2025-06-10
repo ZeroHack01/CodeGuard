@@ -397,7 +397,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 <br/>
 
-**[🐛 Report Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💼 LinkedIn](https://linkedin.com/in/zerohack01) • [📧 Email](mailto:mongwoiching2080@gmail.com)**
+**[🐛 Report Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💼 LinkedIn](https://www.linkedin.com/in/mongwoi/) • [📧 Email](mailto:mongwoiching2080@gmail.com)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=flat-square&logo=github)](https://github.com/ZeroHack01)
 
