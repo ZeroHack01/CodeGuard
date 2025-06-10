@@ -400,7 +400,6 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 **[🐛 Report Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💬 Discussions](https://github.com/ZeroHack01/CodeGuard/discussions) • [📧 Contact](mailto:contact@zerohack01.dev)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=flat-square&logo=github)](https://github.com/ZeroHack01)
-[![Website](https://img.shields.io/badge/Website-zerohack01.dev-blue?style=flat-square&logo=google-chrome)](https://zerohack01.dev)
 
 **⭐ Star this repository if CodeGuard helped secure your code!**
 
