@@ -18,36 +18,9 @@
 *Detect vulnerabilities • Generate reports • Secure your code*
 
 [🚀 Quick Install](#-installation-guide) • 
-[📊 Live Demo](#-live-demo) • 
-[🔍 Features](#-features) • 
-[📖 Docs](#-documentation)
-
-<br>
-
----
-
-### 📊 **Project Statistics**
-
-<table align="center">
-<tr>
-<td align="center">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=ZeroHack01&repo=CodeGuard&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=58A6FF&icon_color=58A6FF" />
-</td>
-<td align="center">
-
-**🎯 Detection Power**
-```
-Languages: ████████████ 100% (10+)
-Patterns:  ████████████ 100% (50+)
-Accuracy:  ████████████  99.8%
-Speed:     ████████████ < 1s
-```
-
-</td>
-</tr>
-</table>
-
-<img src="https://github-profile-trophy.vercel.app/api/?username=ZeroHack01&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&margin-h=15" />
+[🎮 Live Demo](#-live-demo) • 
+[📚 Documentation](#-documentation) • 
+[🤝 Contributing](#-contributing)
 
 </div>
 
@@ -58,18 +31,18 @@ Speed:     ████████████ < 1s
 <table>
 <tr>
 <td width="33%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" width="80" height="80" />
-<h3>🛡️ <b>Advanced Security</b></h3>
+<h2>🛡️</h2>
+<h3><b>Advanced Security</b></h3>
 <p>50+ vulnerability patterns<br>OWASP compliance<br>Real-time detection</p>
 </td>
 <td width="33%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" width="80" height="80" />
-<h3>💻 <b>Modern Interface</b></h3>
+<h2>💻</h2>
+<h3><b>Modern Interface</b></h3>
 <p>Beautiful web UI<br>Drag & drop files<br>Instant results</p>
 </td>
 <td width="33%" align="center">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Rocket.png" width="80" height="80" />
-<h3>🚀 <b>Multi-Platform</b></h3>
+<h2>🚀</h2>
+<h3><b>Multi-Platform</b></h3>
 <p>Windows, Mac, Linux<br>10+ languages<br>Easy setup</p>
 </td>
 </tr>
@@ -77,17 +50,7 @@ Speed:     ████████████ < 1s
 
 ---
 
-## 🔥 **Live Demo**
-
-<div align="center">
-
-### 🎬 **Web Interface Preview**
-
-<img src="https://via.placeholder.com/800x500/0D1117/6366F1?text=🛡️+CodeGuard+Web+Interface+🐞" alt="CodeGuard Interface" />
-
-*↑ Modern security scanner with real-time analysis*
-
-</div>
+## 🎮 **Live Demo**
 
 ### 🎯 **Sample Scan Results**
 
@@ -142,14 +105,14 @@ Speed:     ████████████ < 1s
 
 ---
 
-## 📊 **Features**
+## 🔥 **Features & Capabilities**
 
 <div align="center">
 
 ### 🎯 **Vulnerability Detection Coverage**
 
 ```mermaid
-pie title Vulnerability Categories
+pie title Security Analysis Coverage
     "Code Injection" : 25
     "Buffer Overflow" : 20
     "XSS Vulnerabilities" : 15
@@ -216,21 +179,21 @@ pie title Vulnerability Categories
 
 <div align="center">
 
-### 🎯 **Quick Install - One Command**
+### 🎯 **One-Command Install**
 
 <table>
 <tr>
 <td align="center" width="33%">
-<img src="https://img.icons8.com/color/48/000000/windows-10.png" />
-<h3>🪟 Windows</h3>
+<h2>🪟</h2>
+<h3>Windows</h3>
 </td>
 <td align="center" width="33%">
-<img src="https://img.icons8.com/color/48/000000/mac-os.png" />
-<h3>🍎 macOS</h3>
+<h2>🍎</h2>
+<h3>macOS</h3>
 </td>
 <td align="center" width="33%">
-<img src="https://img.icons8.com/color/48/000000/linux.png" />
-<h3>🐧 Linux</h3>
+<h2>🐧</h2>
+<h3>Linux</h3>
 </td>
 </tr>
 </table>
@@ -309,13 +272,6 @@ pip install -r requirements.txt
 python app.py
 ```
 
-#### **Method 3: Manual Download**
-1. Download Python from [python.org](https://python.org)
-2. Download ZIP from [GitHub](https://github.com/ZeroHack01/CodeGuard/archive/master.zip)
-3. Extract to `C:\CodeGuard\`
-4. Open Command Prompt in that folder
-5. Run installation commands above
-
 **🎯 Windows-specific notes:**
 - Use `python` instead of `python3`
 - Use `pip` instead of `pip3`
@@ -352,28 +308,6 @@ pip3 install -r requirements.txt
 
 # Run CodeGuard
 python3 app.py
-```
-
-#### **Method 2: Using pyenv (Advanced)**
-```bash
-# Install pyenv
-brew install pyenv
-
-# Install specific Python version
-pyenv install 3.11.0
-pyenv local 3.11.0
-
-# Setup CodeGuard
-git clone https://github.com/ZeroHack01/CodeGuard.git
-cd CodeGuard
-
-# Create virtual environment
-python -m venv codeguard_env
-source codeguard_env/bin/activate
-
-# Install and run
-pip install -r requirements.txt
-python app.py
 ```
 
 **🎯 macOS-specific notes:**
@@ -432,24 +366,6 @@ source codeguard_env/bin/activate
 # Install and run
 pip3 install -r requirements.txt
 python3 app.py
-```
-
-#### **Arch Linux:**
-```bash
-# Install packages
-sudo pacman -S python python-pip git
-
-# Clone and setup
-git clone https://github.com/ZeroHack01/CodeGuard.git
-cd CodeGuard
-
-# Virtual environment
-python -m venv codeguard_env
-source codeguard_env/bin/activate
-
-# Install and run
-pip install -r requirements.txt
-python app.py
 ```
 
 **🎯 Linux-specific notes:**
@@ -586,7 +502,7 @@ curl http://localhost:5000
 
 ---
 
-## 🎮 **Quick Start Guide**
+## 🎯 **Quick Start Guide**
 
 <div align="center">
 
@@ -595,17 +511,17 @@ curl http://localhost:5000
 <table>
 <tr>
 <td align="center" width="33%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Right.png" width="60" />
+<h2>👉</h2>
 <h3>1️⃣ Upload</h3>
 <p>Drag & drop your<br>code files</p>
 </td>
 <td align="center" width="33%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="60" />
+<h2>🚀</h2>
 <h3>2️⃣ Scan</h3>
 <p>Click "Execute Analysis"<br>& wait for results</p>
 </td>
 <td align="center" width="33%">
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="60" />
+<h2>📊</h2>
 <h3>3️⃣ Fix</h3>
 <p>Review issues &<br>secure your code</p>
 </td>
@@ -866,10 +782,6 @@ security_scan:
 
 ### 🌟 **Join the CodeGuard Community!**
 
-<img src="https://contrib.rocks/image?repo=ZeroHack01/CodeGuard" />
-
-*Contributors make CodeGuard better every day*
-
 [![Contribute](https://img.shields.io/badge/🤝_Contribute-Now-brightgreen?style=for-the-badge&logo=github)](https://github.com/ZeroHack01/CodeGuard/contribute)
 [![Issues](https://img.shields.io/badge/🐛_Report-Issues-red?style=for-the-badge&logo=github)](https://github.com/ZeroHack01/CodeGuard/issues)
 [![Discussions](https://img.shields.io/badge/💬_Join-Discussion-blue?style=for-the-badge&logo=github)](https://github.com/ZeroHack01/CodeGuard/discussions)
@@ -912,99 +824,6 @@ git push origin feature/amazing-feature
 
 # 11. Create Pull Request on GitHub
 ```
-
-</details>
-
----
-
-## 📞 **Support & Community**
-
-<div align="center">
-
-### 🆘 **Need Help?**
-
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/github.png" />
-<h4>🐛 Issues</h4>
-<a href="https://github.com/ZeroHack01/CodeGuard/issues">Report Bugs</a>
-</td>
-<td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/chat.png" />
-<h4>💬 Discussions</h4>
-<a href="https://github.com/ZeroHack01/CodeGuard/discussions">Ask Questions</a>
-</td>
-<td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/discord-logo.png" />
-<h4>💬 Discord</h4>
-<a href="#">Join Community</a>
-</td>
-<td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/email.png" />
-<h4>📧 Email</h4>
-<a href="mailto:codeguard@zerohack01.dev">Contact Us</a>
-</td>
-</tr>
-</table>
-
-</div>
-
-<details>
-<summary><b>🔧 Common Issues & Solutions</b></summary>
-
-### **❌ Installation Issues**
-
-**Problem:** `pip install -r requirements.txt` fails
-```bash
-# Solution 1: Update pip
-python -m pip install --upgrade pip
-
-# Solution 2: Use specific Python version  
-python3.9 -m pip install -r requirements.txt
-
-# Solution 3: Install individually
-pip install flask flask-cors esprima beautifulsoup4
-```
-
-**Problem:** Virtual environment not working
-```bash
-# Windows
-python -m venv --clear codeguard_env
-codeguard_env\Scripts\activate
-
-# macOS/Linux
-python3 -m venv --clear codeguard_env
-source codeguard_env/bin/activate
-```
-
-### **🌐 Web Interface Issues**
-
-**Problem:** Can't access http://localhost:5000
-```bash
-# Check if running
-netstat -an | grep 5000
-
-# Try different port
-python app.py --port 8080
-
-# Check firewall
-sudo ufw allow 5000  # Linux
-```
-
-**Problem:** Upload fails
-- Check file size (< 10MB)
-- Verify file extension is supported
-- Try different browser
-- Check browser console for errors
-
-### **🔍 Scanning Issues**
-
-**Problem:** No vulnerabilities detected in vulnerable code
-- Check file encoding (UTF-8 recommended)
-- Verify language is supported
-- Update patterns in scanner.py
-- Check logs in codeguard.log
 
 </details>
 
@@ -1077,21 +896,96 @@ timeline
 
 ---
 
-## 📊 **Project Statistics**
+## 📞 **Support & Community**
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=ZeroHack01&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=6366F1&text_color=58A6FF&icon_color=58A6FF" />
+### 🆘 **Need Help?**
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ZeroHack01&theme=tokyonight&hide_border=true&background=0D1117&ring=6366F1&fire=58A6FF&currStreakLabel=58A6FF" />
-
-### 📈 **Repository Activity**
-
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/ZeroHack01/CodeGuard?style=for-the-badge&color=6366F1&labelColor=000000)
-![GitHub last commit](https://img.shields.io/github/last-commit/ZeroHack01/CodeGuard?style=for-the-badge&color=58A6FF&labelColor=000000)
-![GitHub code size](https://img.shields.io/github/languages/code-size/ZeroHack01/CodeGuard?style=for-the-badge&color=F59E0B&labelColor=000000)
+<table>
+<tr>
+<td align="center" width="25%">
+<h2>🐛</h2>
+<h4>Issues</h4>
+<a href="https://github.com/ZeroHack01/CodeGuard/issues">Report Bugs</a>
+</td>
+<td align="center" width="25%">
+<h2>💬</h2>
+<h4>Discussions</h4>
+<a href="https://github.com/ZeroHack01/CodeGuard/discussions">Ask Questions</a>
+</td>
+<td align="center" width="25%">
+<h2>📧</h2>
+<h4>Email</h4>
+<a href="mailto:contact@zerohack01.dev">Contact Us</a>
+</td>
+<td align="center" width="25%">
+<h2>🌐</h2>
+<h4>Website</h4>
+<a href="https://zerohack01.dev">Visit Site</a>
+</td>
+</tr>
+</table>
 
 </div>
+
+<details>
+<summary><b>🔧 Common Issues & Solutions</b></summary>
+
+### **❌ Installation Issues**
+
+**Problem:** `pip install -r requirements.txt` fails
+```bash
+# Solution 1: Update pip
+python -m pip install --upgrade pip
+
+# Solution 2: Use specific Python version  
+python3.9 -m pip install -r requirements.txt
+
+# Solution 3: Install individually
+pip install flask flask-cors esprima beautifulsoup4
+```
+
+**Problem:** Virtual environment not working
+```bash
+# Windows
+python -m venv --clear codeguard_env
+codeguard_env\Scripts\activate
+
+# macOS/Linux
+python3 -m venv --clear codeguard_env
+source codeguard_env/bin/activate
+```
+
+### **🌐 Web Interface Issues**
+
+**Problem:** Can't access http://localhost:5000
+```bash
+# Check if running
+netstat -an | grep 5000
+
+# Try different port
+python app.py --port 8080
+
+# Check firewall
+sudo ufw allow 5000  # Linux
+```
+
+**Problem:** Upload fails
+- Check file size (< 10MB)
+- Verify file extension is supported
+- Try different browser
+- Check browser console for errors
+
+### **🔍 Scanning Issues**
+
+**Problem:** No vulnerabilities detected in vulnerable code
+- Check file encoding (UTF-8 recommended)
+- Verify language is supported
+- Update patterns in scanner.py
+- Check logs in codeguard.log
+
+</details>
 
 ---
 
@@ -1118,23 +1012,23 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <table>
 <tr>
 <td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/security-shield-green.png" />
-<h4>🔒 OWASP</h4>
+<h2>🔒</h2>
+<h4>OWASP</h4>
 <p>Security guidelines</p>
 </td>
 <td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/python.png" />
-<h4>🐍 Python</h4>
+<h2>🐍</h2>
+<h4>Python</h4>
 <p>Amazing ecosystem</p>
 </td>
 <td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/flask.png" />
-<h4>🌶️ Flask</h4>
+<h2>🌶️</h2>
+<h4>Flask</h4>
 <p>Web framework</p>
 </td>
 <td align="center" width="25%">
-<img src="https://img.icons8.com/color/48/000000/github.png" />
-<h4>👥 Community</h4>
+<h2>👥</h2>
+<h4>Community</h4>
 <p>Contributors</p>
 </td>
 </tr>
@@ -1169,10 +1063,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Made with ❤️ by [@ZeroHack01](https://github.com/ZeroHack01)**
 
-**🔗 Connect:** [GitHub](https://github.com/ZeroHack01) • [Twitter](https://twitter.com/ZeroHack01) • [LinkedIn](https://linkedin.com/in/zerohack01) • [Website](https://zerohack01.dev)
-
-<br>
-
-[![Profile Views](https://visitcount.itsvg.in/api?id=ZeroHack01&label=Profile%20Views&color=6366F1&icon=5&pretty=true)](https://github.com/ZeroHack01)
+**🔗 Connect:** [GitHub](https://github.com/ZeroHack01) • [Website](https://zerohack01.dev) • [Email](mailto:contact@zerohack01.dev)
 
 </div>
