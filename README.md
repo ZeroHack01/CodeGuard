@@ -71,7 +71,7 @@ CodeGuard is a static code analyzer that scans source code files to identify sec
 <tr>
 <td width="33%" align="center">
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" width="24"/> Windows
+### 🪟 Windows
 
 ```powershell
 # PowerShell
@@ -92,7 +92,7 @@ python app.py
 </td>
 <td width="33%" align="center">
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="24"/> macOS
+### 🍎 macOS
 
 ```bash
 # Terminal
@@ -113,7 +113,7 @@ python3 app.py
 </td>
 <td width="33%" align="center">
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="24"/> Linux
+### 🐧 Linux
 
 ```bash
 # For Ubuntu/Debian
@@ -145,10 +145,24 @@ python3 app.py
 
 <div align="center">
 
-### 🐳 Docker Option
+### 🐳 Docker Installation
 
 ```bash
-docker run -p 5000:5000 zerohack01/codeguard:latest
+# Option 1: Pull from Docker Hub
+docker pull zerohack01/codeguard:latest
+docker run -d -p 5000:5000 --name codeguard zerohack01/codeguard:latest
+
+# Option 2: Build from source
+git clone https://github.com/ZeroHack01/CodeGuard.git
+cd CodeGuard
+docker build -t codeguard .
+docker run -d -p 5000:5000 --name codeguard codeguard
+
+# Stop container
+docker stop codeguard
+
+# Remove container
+docker rm codeguard
 ```
 
 **🌐 Access web interface:** `http://localhost:5000`
@@ -165,7 +179,7 @@ docker run -p 5000:5000 zerohack01/codeguard:latest
 <tr>
 <td width="33%" align="center">
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" width="20"/> Windows
+### 🪟 Windows
 1. Open browser: `localhost:5000`
 2. Upload code files
 3. Click "Execute Analysis"
@@ -174,7 +188,7 @@ docker run -p 5000:5000 zerohack01/codeguard:latest
 </td>
 <td width="33%" align="center">
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="20"/> macOS
+### 🍎 macOS
 1. Navigate to `localhost:5000`
 2. Drag & drop files
 3. Start security scan
@@ -183,7 +197,7 @@ docker run -p 5000:5000 zerohack01/codeguard:latest
 </td>
 <td width="33%" align="center">
 
-### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="20"/> Linux
+### 🐧 Linux
 1. Open Firefox/Chrome: `localhost:5000`
 2. Select files for scanning
 3. Run vulnerability analysis
