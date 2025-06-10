@@ -5,7 +5,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=28&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=Advanced+Vulnerability+Detection;Cross-Platform+Security+Scanner;Real-Time+Code+Analysis;Multi-Language+Support" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=28&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=Static+Code+Security+Scanner;Vulnerability+Detection+Tool;Multi-Language+Analysis;Cross-Platform+Support" />
 
 <br/>
 
@@ -24,34 +24,34 @@
 
 ---
 
-## ⚡ **What It Does**
+## 🛡️ **What CodeGuard Does**
 
-CodeGuard scans source code files to identify common security vulnerabilities using pattern matching and static analysis techniques.
+CodeGuard is a static code analyzer that scans source code files to identify security vulnerabilities using pattern matching and basic static analysis.
 
 <table>
 <tr>
 <td width="50%">
 
-**🔍 Detects:**
-- Code injection (eval, exec)
-- Hardcoded credentials & API keys
-- Command injection vulnerabilities
-- Buffer overflows (C/C++)
-- XSS patterns (JavaScript/HTML)
-- SQL injection risks
-- Insecure cryptographic functions
+**🔍 Security Checks:**
+- Code injection vulnerabilities
+- Hardcoded credentials & secrets
+- Command injection patterns
+- Buffer overflow risks (C/C++)
+- XSS patterns (Web files)
+- SQL injection indicators
+- Unsafe function usage
 
 </td>
 <td width="50%">
 
-**📊 Features:**
-- Line-by-line vulnerability analysis
-- Severity classification (Critical/High/Medium)
+**📊 Output Features:**
+- Line-by-line issue reporting
+- Severity classification
 - Fix recommendations
-- Web dashboard interface
-- JSON/CSV export capabilities
-- REST API for automation
-- Real-time scanning results
+- Web interface dashboard
+- JSON/CSV export options
+- REST API access
+- Real-time scan results
 
 </td>
 </tr>
@@ -71,7 +71,7 @@ CodeGuard scans source code files to identify common security vulnerabilities us
 <tr>
 <td width="33%" align="center">
 
-### <img src="https://img.icons8.com/color/48/000000/windows-10.png" width="24"/> Windows
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" width="24"/> Windows
 
 ```powershell
 # PowerShell
@@ -85,14 +85,14 @@ venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Launch scanner
+# Start scanner
 python app.py
 ```
 
 </td>
 <td width="33%" align="center">
 
-### <img src="https://img.icons8.com/color/48/000000/mac-os.png" width="24"/> macOS
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="24"/> macOS
 
 ```bash
 # Terminal
@@ -106,17 +106,25 @@ source venv/bin/activate
 # Install dependencies
 pip3 install -r requirements.txt
 
-# Launch scanner
+# Start scanner
 python3 app.py
 ```
 
 </td>
 <td width="33%" align="center">
 
-### <img src="https://img.icons8.com/color/48/000000/linux.png" width="24"/> Linux
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="24"/> Linux
 
 ```bash
-# Terminal
+# For Ubuntu/Debian
+sudo apt update
+sudo apt install python3 python3-pip python3-venv git
+
+# For CentOS/RHEL/Fedora
+sudo yum install python3 python3-pip git  # CentOS/RHEL
+sudo dnf install python3 python3-pip git  # Fedora
+
+# Clone and setup
 git clone https://github.com/ZeroHack01/CodeGuard.git
 cd CodeGuard
 
@@ -127,7 +135,7 @@ source venv/bin/activate
 # Install dependencies
 pip3 install -r requirements.txt
 
-# Launch scanner
+# Start scanner
 python3 app.py
 ```
 
@@ -137,19 +145,19 @@ python3 app.py
 
 <div align="center">
 
-### 🐳 Docker (All Platforms)
+### 🐳 Docker Option
 
 ```bash
 docker run -p 5000:5000 zerohack01/codeguard:latest
 ```
 
-**🌐 Access:** `http://localhost:5000`
+**🌐 Access web interface:** `http://localhost:5000`
 
 </div>
 
 ---
 
-## 📖 **Usage**
+## 📖 **Usage Guide**
 
 ### 🖥️ **Web Interface**
 
@@ -157,58 +165,59 @@ docker run -p 5000:5000 zerohack01/codeguard:latest
 <tr>
 <td width="33%" align="center">
 
-### <img src="https://img.icons8.com/color/48/000000/windows-10.png" width="20"/> Windows
-1. Open browser to `localhost:5000`
-2. Drag & drop code files
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" width="20"/> Windows
+1. Open browser: `localhost:5000`
+2. Upload code files
 3. Click "Execute Analysis"
-4. Review security findings
+4. Review vulnerability report
 
 </td>
 <td width="33%" align="center">
 
-### <img src="https://img.icons8.com/color/48/000000/mac-os.png" width="20"/> macOS
-1. Open Safari/Chrome to `localhost:5000`
-2. Upload files via web interface
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" width="20"/> macOS
+1. Navigate to `localhost:5000`
+2. Drag & drop files
 3. Start security scan
-4. Export results as needed
+4. Export results if needed
 
 </td>
 <td width="33%" align="center">
 
-### <img src="https://img.icons8.com/color/48/000000/linux.png" width="20"/> Linux
-1. Open Firefox to `localhost:5000`
-2. Select code files for analysis
-3. Run vulnerability scan
+### <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" width="20"/> Linux
+1. Open Firefox/Chrome: `localhost:5000`
+2. Select files for scanning
+3. Run vulnerability analysis
 4. Download detailed reports
 
 </td>
 </tr>
 </table>
 
-### 💻 **Command Line**
+### 💻 **Command Line Usage**
 
 ```python
 # Direct file scanning
 from scanner import scan_file
 results = scan_file('example.py')
-print(results)
+for issue in results:
+    print(f"Line {issue['line']}: {issue['issue']}")
 ```
 
 ```bash
-# API usage
+# API call
 curl -X POST -F "file=@test.py" http://localhost:5000/api/scan
 ```
 
 ---
 
-## 📊 **Sample Results**
+## 📊 **Sample Output**
 
 <details>
-<summary><b>🔍 Click to see scan output</b></summary>
+<summary><b>🔍 Example scan results</b></summary>
 
 ```json
 {
-  "filename": "vulnerable_app.py",
+  "filename": "app.py",
   "language": "python",
   "scan_time": 0.8,
   "issues": [
@@ -221,17 +230,17 @@ curl -X POST -F "file=@test.py" http://localhost:5000/api/scan
     },
     {
       "line": 15,
-      "code": "API_KEY = 'sk-1234567890'",
-      "issue": "Hardcoded Credentials",
+      "code": "password = 'admin123'",
+      "issue": "Hardcoded Password",
       "severity": "High",
-      "description": "API key found in source code"
+      "description": "Credentials found in source code"
     },
     {
       "line": 31,
-      "code": "os.system(user_command)",
+      "code": "os.system(command)",
       "issue": "Command Injection",
-      "severity": "High", 
-      "description": "System command execution with user input"
+      "severity": "High",
+      "description": "System command execution risk"
     }
   ],
   "summary": {
@@ -251,17 +260,17 @@ curl -X POST -F "file=@test.py" http://localhost:5000/api/scan
 
 <div align="center">
 
-| Language | Extensions | Key Detections |
-|----------|------------|----------------|
+| Language | File Types | Security Patterns |
+|----------|------------|-------------------|
 | 🐍 **Python** | `.py .pyw` | eval(), exec(), os.system(), hardcoded secrets |
-| 🟨 **JavaScript** | `.js .jsx` | innerHTML, eval(), XSS patterns, DOM manipulation |
-| ⚡ **TypeScript** | `.ts .tsx` | Unsafe type assertions, XSS vulnerabilities |
+| 🟨 **JavaScript** | `.js .jsx` | innerHTML, eval(), XSS patterns, DOM risks |
+| ⚡ **TypeScript** | `.ts .tsx` | Type safety issues, XSS vulnerabilities |
 | 🔵 **C/C++** | `.c .cpp .h` | gets(), strcpy(), buffer overflows, system() |
-| ☕ **Java** | `.java` | Runtime.exec(), reflection attacks, path traversal |
+| ☕ **Java** | `.java` | Runtime.exec(), reflection, path traversal |
 | 🐘 **PHP** | `.php` | eval(), shell_exec(), SQL injection, file inclusion |
 | 💎 **Ruby** | `.rb` | eval(), system(), command injection |
 | 🐹 **Go** | `.go` | exec.Command(), unsafe operations |
-| 🌐 **HTML** | `.html` | Script injection, javascript: protocols |
+| 🌐 **HTML** | `.html` | Script injection, unsafe protocols |
 
 </div>
 
@@ -269,19 +278,19 @@ curl -X POST -F "file=@test.py" http://localhost:5000/api/scan
 
 ## 🔧 **API Reference**
 
-### 📡 **Endpoints**
+### 📡 **Available Endpoints**
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/scan` | Upload and analyze file |
-| `GET` | `/` | Web interface |
-| `GET` | `/download/{format}/{filename}` | Export results |
+| Method | Endpoint | Purpose |
+|--------|----------|---------|
+| `POST` | `/api/scan` | Upload and scan file |
+| `GET` | `/` | Access web interface |
+| `GET` | `/download/{format}/{filename}` | Export scan results |
 
-### 📝 **Example Request**
+### 📝 **Scan Request**
 
 ```bash
 curl -X POST \
-  -F "file=@code.py" \
+  -F "file=@source_code.py" \
   -H "Content-Type: multipart/form-data" \
   http://localhost:5000/api/scan
 ```
@@ -291,10 +300,17 @@ curl -X POST \
 ```json
 {
   "success": true,
-  "filename": "code.py",
+  "filename": "source_code.py",
   "language": "python",
-  "issues": [...],
-  "total_issues": 2
+  "issues": [
+    {
+      "line": 15,
+      "code": "eval(data)",
+      "issue": "Code Injection",
+      "severity": "Critical"
+    }
+  ],
+  "total_issues": 1
 }
 ```
 
@@ -303,57 +319,58 @@ curl -X POST \
 ## ⚙️ **Configuration**
 
 <details>
-<summary><b>🔧 Environment Variables</b></summary>
+<summary><b>🔧 Environment Settings</b></summary>
 
 ```bash
-# Server Settings
+# Server Configuration
 FLASK_HOST=0.0.0.0
 FLASK_PORT=5000
 FLASK_DEBUG=false
 
-# File Limits
-MAX_FILE_SIZE=10485760    # 10MB
+# File Processing
+MAX_FILE_SIZE=10485760    # 10MB limit
 UPLOAD_TIMEOUT=30         # 30 seconds
 
-# Analysis Options
-ENABLE_AST_ANALYSIS=true
-SEVERITY_THRESHOLD=medium
-EXPORT_FORMATS=json,csv
+# Scanner Options
+ENABLE_AST_ANALYSIS=true  # JavaScript AST parsing
+SEVERITY_THRESHOLD=medium # Minimum severity to report
+EXPORT_FORMATS=json,csv   # Available export formats
 ```
 
 </details>
 
 ---
 
-## 🧪 **Testing**
+## 🧪 **Testing CodeGuard**
 
-Test CodeGuard with this vulnerable sample:
+Create a test file with known vulnerabilities:
 
 ```python
 # test_vulnerable.py
-password = "admin123"              # Hardcoded credential
-eval(input("Enter code: "))        # Code injection
-os.system("rm -rf " + user_path)   # Command injection
+api_key = "sk-1234567890abcdef"    # Hardcoded credential
+user_code = input("Enter code: ")
+eval(user_code)                    # Code injection
+os.system("ls " + user_path)       # Command injection
 ```
 
-Expected: 3 security issues detected
+Expected result: 3 security issues detected
 
 ---
 
 ## 🤝 **Contributing**
 
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature-name`
-3. Make changes and test
-4. Commit: `git commit -m "Add feature"`
-5. Push: `git push origin feature-name`
+1. Fork this repository
+2. Create feature branch: `git checkout -b new-feature`
+3. Make your changes and test
+4. Commit changes: `git commit -m "Add new feature"`
+5. Push to branch: `git push origin new-feature`
 6. Submit Pull Request
 
 ---
 
 ## 📄 **License**
 
-MIT License - see [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for complete details.
 
 ---
 
@@ -362,15 +379,15 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=500&lines=Built+by+@ZeroHack01;Star+This+Repository;Secure+Your+Code" />
+<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=500&lines=Built+by+@ZeroHack01;Static+Code+Security;Open+Source+Scanner" />
 
 <br/>
 
-**[🐛 Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💬 Discussions](https://github.com/ZeroHack01/CodeGuard/discussions) • [📧 Contact](mailto:contact@zerohack01.dev)**
+**[🐛 Report Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💬 Discussions](https://github.com/ZeroHack01/CodeGuard/discussions) • [📧 Contact](mailto:contact@zerohack01.dev)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=flat-square&logo=github)](https://github.com/ZeroHack01)
 [![Website](https://img.shields.io/badge/Website-zerohack01.dev-blue?style=flat-square&logo=google-chrome)](https://zerohack01.dev)
 
-**⭐ Star if this helped secure your code!**
+**⭐ Star this repository if CodeGuard helped secure your code!**
 
 </div>
