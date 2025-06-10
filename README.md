@@ -1,105 +1,89 @@
 <div align="center">
 
-# ⚡ CodeGuard
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00FFFF&center=true&vCenter=true&width=600&lines=Cross-Platform+Security+Scanner;Real-Time+Vulnerability+Detection;Multi-Language+Code+Analysis;Advanced+Pattern+Recognition" alt="CodeGuard Scanner" />
+<!-- Animated Wave Header -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=CodeGuard&fontSize=70&fontColor=fff&animation=twinkling&fontAlignY=35&desc=Next-Gen%20Security%20Scanner&descAlignY=55&descSize=25" />
 
 <br/>
 
-<img src="https://img.shields.io/badge/🚀_Release-v2.0.0-00FFFF?style=for-the-badge&labelColor=1a1a2e&color=16213e" />
-<img src="https://img.shields.io/badge/🔥_Python-3.8+-00FF41?style=for-the-badge&labelColor=1a1a2e&color=0f3460" />
-<img src="https://img.shields.io/badge/⚡_License-MIT-FF6B6B?style=for-the-badge&labelColor=1a1a2e&color=533483" />
-<img src="https://img.shields.io/github/stars/ZeroHack01/CodeGuard?style=for-the-badge&labelColor=1a1a2e&color=4ECDC4&label=⭐_STARS" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=35&pause=1000&color=00D9FF&center=true&vCenter=true&multiline=true&width=800&height=100&lines=🔮+ADVANCED+VULNERABILITY+DETECTION;⚡+CROSS-PLATFORM+SECURITY+SCANNER;🚀+REAL-TIME+CODE+ANALYSIS;🛡️+MULTI-LANGUAGE+PROTECTION" />
+
+<br/>
+
+<!-- Futuristic Badges -->
+<img src="https://img.shields.io/badge/🚀_VERSION-2.0.0-00D9FF?style=for-the-badge&labelColor=0a0a23&color=1a1a2e&logoColor=00D9FF" />
+<img src="https://img.shields.io/badge/⚡_PYTHON-3.8+-00FF88?style=for-the-badge&labelColor=0a0a23&color=1a1a2e&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/🔥_STATUS-ACTIVE-FF3366?style=for-the-badge&labelColor=0a0a23&color=1a1a2e&logoColor=FF3366" />
+<img src="https://img.shields.io/github/stars/ZeroHack01/CodeGuard?style=for-the-badge&labelColor=0a0a23&color=1a1a2e&logoColor=FFD700&label=⭐_STARS" />
 
 <br/><br/>
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  🔮 NEXT-GEN SECURITY SCANNER FOR MODERN DEVELOPERS        │
-│                                                             │
-│  ⚡ Cross-Platform  🔍 Multi-Language  🚀 Real-Time        │
-└─────────────────────────────────────────────────────────────┘
-```
-
-**[🚀 Quick Install](#-deployment) • [🎮 Live Demo](#-interface) • [🔧 API Docs](#-api-integration) • [🌐 Platforms](#-cross-platform-support)**
+<!-- Glowing Text Effect -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=2000&color=00FFE1&center=true&vCenter=true&width=900&lines=🌊+Dive+Deep+Into+Code+Security+🌊;🔍+Discover+Hidden+Vulnerabilities;⚡+Lightning-Fast+Analysis+Engine;🛡️+Protect+Your+Digital+Assets" />
 
 </div>
 
 ---
 
-## 🌟 **Core Capabilities**
-
 <div align="center">
 
-<table>
+## 🌊 **SECURITY OCEAN DASHBOARD** 🌊
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
+
+</div>
+
+<table width="100%">
 <tr>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/🔍-SCANNER-00FFFF?style=for-the-badge&labelColor=1a1a2e" /><br/>
+<td width="25%" align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/🔍_SCANNER-ACTIVE-00D9FF?style=for-the-badge&labelColor=0a0a23" /><br/>
 <b>Vulnerability Detection</b><br/>
-<sub>50+ security patterns</sub>
+<sub>50+ Security Patterns</sub>
 </td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/⚡-ENGINE-00FF41?style=for-the-badge&labelColor=1a1a2e" /><br/>
+<td width="25%" align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/⚡_ENGINE-POWERED-00FF88?style=for-the-badge&labelColor=0a0a23" /><br/>
 <b>Analysis Engine</b><br/>
-<sub>Real-time processing</sub>
+<sub>Real-Time Processing</sub>
 </td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/🌐-INTERFACE-FF6B6B?style=for-the-badge&labelColor=1a1a2e" /><br/>
+<td width="25%" align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/🌐_INTERFACE-MODERN-FF3366?style=for-the-badge&labelColor=0a0a23" /><br/>
 <b>Web Dashboard</b><br/>
-<sub>Modern UI/UX</sub>
+<sub>Futuristic UI/UX</sub>
 </td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/🔧-API-4ECDC4?style=for-the-badge&labelColor=1a1a2e" /><br/>
+<td width="25%" align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/🔧_API-READY-FFD700?style=for-the-badge&labelColor=0a0a23" /><br/>
 <b>REST Integration</b><br/>
-<sub>CI/CD ready</sub>
+<sub>CI/CD Compatible</sub>
 </td>
 </tr>
 </table>
 
-</div>
-
-### 🔥 **Feature Matrix**
-
-```mermaid
-graph LR
-    A[📁 Code Input] --> B{🔍 Scanner}
-    B --> C[🐍 Python]
-    B --> D[🟨 JavaScript]
-    B --> E[⚡ TypeScript]
-    B --> F[🔵 C/C++]
-    B --> G[☕ Java]
-    C --> H[📊 Analysis]
-    D --> H
-    E --> H
-    F --> H
-    G --> H
-    H --> I[⚡ Real-time Results]
-    I --> J[📱 Web Dashboard]
-    I --> K[🔧 API Response]
-    I --> L[📄 Report Export]
-```
-
 ---
-
-## 🚀 **Deployment**
 
 <div align="center">
 
-### 🎯 **One-Click Setup**
+## 🚀 **QUANTUM DEPLOYMENT** 🚀
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="900" />
 
 </div>
 
-<table>
+<table width="100%">
 <tr>
 <td width="33%" align="center">
 
-**🖥️ Windows**
+### 🖥️ **WINDOWS DEPLOYMENT**
+<img src="https://user-images.githubusercontent.com/74038190/212281756-450d3ffa-9335-4b98-a965-db8a18fee927.gif" width="150" />
+
 ```powershell
-# PowerShell
+# PowerShell Command
 git clone https://github.com/ZeroHack01/CodeGuard.git
 cd CodeGuard
-python -m venv env
-env\Scripts\activate
+python -m venv quantum_env
+quantum_env\Scripts\activate
 pip install -r requirements.txt
 python app.py
 ```
@@ -107,13 +91,15 @@ python app.py
 </td>
 <td width="33%" align="center">
 
-**🍎 macOS**
+### 🍎 **MACOS DEPLOYMENT**
+<img src="https://user-images.githubusercontent.com/74038190/212281763-e6ecd7ef-c4aa-45b6-a97c-f33f6bb592bd.gif" width="150" />
+
 ```bash
-# Terminal
+# Terminal Command
 git clone https://github.com/ZeroHack01/CodeGuard.git
 cd CodeGuard
-python3 -m venv env
-source env/bin/activate
+python3 -m venv quantum_env
+source quantum_env/bin/activate
 pip3 install -r requirements.txt
 python3 app.py
 ```
@@ -121,13 +107,15 @@ python3 app.py
 </td>
 <td width="33%" align="center">
 
-**🐧 Linux**
+### 🐧 **LINUX DEPLOYMENT**
+<img src="https://user-images.githubusercontent.com/74038190/212281780-0afd9616-8310-46e9-a898-c4f5269f1387.gif" width="150" />
+
 ```bash
-# Shell
+# Shell Command
 git clone https://github.com/ZeroHack01/CodeGuard.git
 cd CodeGuard
-python3 -m venv env
-source env/bin/activate
+python3 -m venv quantum_env
+source quantum_env/bin/activate
 pip3 install -r requirements.txt
 python3 app.py
 ```
@@ -138,194 +126,210 @@ python3 app.py
 
 <div align="center">
 
-### 🐳 **Container Deployment**
+### 🐳 **DOCKER UNIVERSE**
+
+<img src="https://user-images.githubusercontent.com/74038190/212284094-e50ceae2-de86-4dd1-b7dd-3c1001fd7b2b.gif" width="200" />
 
 ```bash
-docker run -p 5000:5000 --name codeguard zerohack01/codeguard:latest
+docker run -p 5000:5000 --name codeguard-quantum zerohack01/codeguard:latest
 ```
 
-**✅ Ready:** `http://localhost:5000`
+**🌐 Portal Access:** `http://localhost:5000`
 
 </div>
 
 ---
 
-## 🎮 **Interface**
-
 <div align="center">
 
-### 🌐 **Web Dashboard Preview**
+## 🌊 **DIGITAL OCEAN INTERFACE** 🌊
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
+
+### 🎮 **CYBERPUNK DASHBOARD**
 
 </div>
 
 ```
-╭─────────────────────────────────────────────────────────────────╮
-│  🛡️ CodeGuard Security Dashboard                               │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  📁 [Drag & Drop Zone]  🔍 [Auto-Detection]  ⚡ [Scan Now]     │
-│                                                                 │
-│  📊 Recent Scans:                                              │
-│  ├─ vulnerable.py     🔥 3 Critical   ⚠️ 2 High               │
-│  ├─ app.js           ⚠️ 1 High       💡 4 Medium             │
-│  └─ main.cpp         🔥 2 Critical   💡 1 Medium             │
-│                                                                 │
-│  🎯 Success Rate: 99.8%  ⚡ Avg Time: 0.8s                    │
-╰─────────────────────────────────────────────────────────────────╯
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║  🌊                    CODEGUARD QUANTUM SCANNER                         🌊  ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║  📁 [████████████ DRAG & DROP ZONE ████████████]  🔍 [AUTO-SCAN]            ║
+║                                                                               ║
+║  ⚡ REAL-TIME ANALYSIS:                                                      ║
+║  ├─ 🐍 Python      ████████████████████████████████████████████ 98%         ║
+║  ├─ 🟨 JavaScript  ████████████████████████████████████████ 95%             ║
+║  ├─ ⚡ TypeScript  ████████████████████████████████████ 92%                 ║
+║  ├─ 🔵 C/C++       ████████████████████████████████████████ 94%             ║
+║  └─ ☕ Java        ████████████████████████████████████ 90%                 ║
+║                                                                               ║
+║  🎯 QUANTUM METRICS: 99.8% Accuracy | ⚡ 0.3s Speed | 🔥 50+ Patterns      ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
-
-### 📱 **Usage Flow**
-
-<div align="center">
-
-```
-Upload File → Auto-Detect Language → Run Analysis → View Results → Export Report
-    ⬇️              ⬇️                  ⬇️             ⬇️            ⬇️
-   📁 Any          🔍 Smart            ⚡ Real-time   📊 Visual    📄 JSON/CSV
-```
-
-</div>
 
 ---
 
-## 🔬 **Analysis Output**
+<div align="center">
+
+## 🔮 **ANALYSIS MATRIX** 🔮
+
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="900" />
+
+</div>
 
 <details>
-<summary><b>🎬 Sample Scan Results</b></summary>
+<summary><b>🎬 QUANTUM SCAN RESULTS PREVIEW</b></summary>
 
 ```yaml
-╭─ 🔍 CODEGUARD ANALYSIS REPORT ────────────────────────────────╮
-│                                                              │
-│ 📄 File: secure_app.py                                      │
-│ 🔤 Language: Python                                         │
-│ ⏱️ Duration: 0.3s                                           │
-│ 🎯 Patterns: 52 security rules applied                      │
-│                                                              │
-├─ 🚨 VULNERABILITIES DETECTED ─────────────────────────────────┤
-│                                                              │
-│ 🔥 [CRITICAL] Code Injection                                │
-│    📍 Line 45: eval(request.form['code'])                   │
-│    💡 Fix: Use ast.literal_eval() or remove dynamic exec    │
-│                                                              │
-│ ⚠️ [HIGH] Credential Exposure                               │
-│    📍 Line 12: DATABASE_URL = "mysql://root:pass123@..."    │
-│    💡 Fix: Move credentials to environment variables        │
-│                                                              │
-│ 💡 [MEDIUM] Weak Randomization                              │
-│    📍 Line 67: token = random.randint(100000, 999999)       │
-│    💡 Fix: Use secrets.randbelow() for secure tokens        │
-│                                                              │
-├─ 📊 SECURITY METRICS ─────────────────────────────────────────┤
-│                                                              │
-│ Risk Score: 🔥 HIGH (Critical vulnerabilities present)      │
-│ Code Quality: 📈 85% (above average security practices)     │
-│ Compliance: ⚠️ OWASP Top 10 violations detected             │
-│                                                              │
-╰──────────────────────────────────────────────────────────────╯
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║  🌊                    SECURITY OCEAN ANALYSIS                          🌊  ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║  📄 TARGET: quantum_app.py                                                   ║
+║  🔤 LANGUAGE: Python                                                         ║
+║  ⏱️ SCAN TIME: 0.3 seconds                                                  ║
+║  🎯 PATTERNS: 52 quantum security rules applied                             ║
+║                                                                               ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║  🚨 VULNERABILITY OCEAN DETECTED 🚨                                         ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║  🔥 [CRITICAL WAVE] Code Injection Tsunami                                  ║
+║     📍 Line 45: eval(request.form['quantum_code'])                          ║
+║     🌊 Impact: Remote code execution vulnerability                          ║
+║     💡 Solution: Use ast.literal_eval() for safe parsing                   ║
+║                                                                               ║
+║  ⚠️ [HIGH TIDE] Credential Ocean Exposure                                   ║
+║     📍 Line 12: QUANTUM_KEY = "sk_live_abc123xyz789..."                     ║
+║     🌊 Impact: API credentials leaked in source                             ║
+║     💡 Solution: Move to secure environment variables                       ║
+║                                                                               ║
+║  💡 [MEDIUM WAVE] Cryptographic Weakness                                    ║
+║     📍 Line 67: token = random.randint(100000, 999999)                      ║
+║     🌊 Impact: Predictable token generation                                 ║
+║     💡 Solution: Use secrets.token_hex() for secure tokens                  ║
+║                                                                               ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║  📊 QUANTUM SECURITY METRICS                                                ║
+╠═══════════════════════════════════════════════════════════════════════════════╣
+║                                                                               ║
+║  🌊 Risk Level: 🔥 CRITICAL TSUNAMI (Immediate action required)            ║
+║  📈 Code Quality: 📊 85% (Above quantum baseline)                          ║
+║  🛡️ Security Score: ⚠️ 65/100 (Needs reinforcement)                       ║
+║  🎯 Compliance: 🌊 OWASP Ocean violations detected                          ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
 
 </details>
 
 ---
 
-## 🌐 **Cross-Platform Support**
-
 <div align="center">
 
-### 🎯 **Language Detection Matrix**
+## 🌐 **LANGUAGE UNIVERSE** 🌐
 
-<table>
-<tr>
-<th>Platform</th>
-<th>Languages</th>
-<th>Patterns</th>
-<th>Status</th>
-</tr>
-<tr>
-<td>🐍 <b>Python</b></td>
-<td><code>.py .pyw .pyx</code></td>
-<td>Code injection, credentials, commands</td>
-<td>🟢 Full Support</td>
-</tr>
-<tr>
-<td>🟨 <b>JavaScript</b></td>
-<td><code>.js .jsx .mjs</code></td>
-<td>XSS, DOM manipulation, eval usage</td>
-<td>🟢 Full Support</td>
-</tr>
-<tr>
-<td>⚡ <b>TypeScript</b></td>
-<td><code>.ts .tsx .d.ts</code></td>
-<td>Type safety, XSS, unsafe calls</td>
-<td>🟢 Full Support</td>
-</tr>
-<tr>
-<td>🔵 <b>C/C++</b></td>
-<td><code>.c .cpp .h .hpp</code></td>
-<td>Buffer overflow, memory leaks</td>
-<td>🟢 Full Support</td>
-</tr>
-<tr>
-<td>☕ <b>Java</b></td>
-<td><code>.java .class</code></td>
-<td>Command execution, reflection</td>
-<td>🟢 Full Support</td>
-</tr>
-<tr>
-<td>🐘 <b>PHP</b></td>
-<td><code>.php .phtml</code></td>
-<td>Code injection, file inclusion</td>
-<td>🟢 Full Support</td>
-</tr>
-<tr>
-<td>💎 <b>Ruby</b></td>
-<td><code>.rb .rake</code></td>
-<td>Code injection, system calls</td>
-<td>🟡 Beta Support</td>
-</tr>
-<tr>
-<td>🐹 <b>Go</b></td>
-<td><code>.go .mod</code></td>
-<td>Command execution, unsafe ops</td>
-<td>🟡 Beta Support</td>
-</tr>
-</table>
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="900" />
 
 </div>
 
+<table width="100%">
+<tr>
+<th align="center">🌊 Language Ocean</th>
+<th align="center">📁 File Types</th>
+<th align="center">🔍 Detection Waves</th>
+<th align="center">⚡ Status</th>
+</tr>
+<tr>
+<td align="center">🐍 <b>Python Tide</b></td>
+<td align="center"><code>.py .pyw .pyx</code></td>
+<td align="center">Code injection, credentials, commands</td>
+<td align="center">🟢 <b>QUANTUM READY</b></td>
+</tr>
+<tr>
+<td align="center">🟨 <b>JavaScript Ocean</b></td>
+<td align="center"><code>.js .jsx .mjs</code></td>
+<td align="center">XSS, DOM waves, eval tsunamis</td>
+<td align="center">🟢 <b>QUANTUM READY</b></td>
+</tr>
+<tr>
+<td align="center">⚡ <b>TypeScript Storm</b></td>
+<td align="center"><code>.ts .tsx .d.ts</code></td>
+<td align="center">Type safety, XSS hurricanes</td>
+<td align="center">🟢 <b>QUANTUM READY</b></td>
+</tr>
+<tr>
+<td align="center">🔵 <b>C/C++ Rapids</b></td>
+<td align="center"><code>.c .cpp .h .hpp</code></td>
+<td align="center">Buffer floods, memory leaks</td>
+<td align="center">🟢 <b>QUANTUM READY</b></td>
+</tr>
+<tr>
+<td align="center">☕ <b>Java Current</b></td>
+<td align="center"><code>.java .class</code></td>
+<td align="center">Command execution torrents</td>
+<td align="center">🟢 <b>QUANTUM READY</b></td>
+</tr>
+<tr>
+<td align="center">🐘 <b>PHP Flow</b></td>
+<td align="center"><code>.php .phtml</code></td>
+<td align="center">Code injection streams</td>
+<td align="center">🟡 <b>QUANTUM BETA</b></td>
+</tr>
+<tr>
+<td align="center">💎 <b>Ruby River</b></td>
+<td align="center"><code>.rb .rake</code></td>
+<td align="center">System call cascades</td>
+<td align="center">🟡 <b>QUANTUM BETA</b></td>
+</tr>
+<tr>
+<td align="center">🐹 <b>Go Stream</b></td>
+<td align="center"><code>.go .mod</code></td>
+<td align="center">Unsafe operation floods</td>
+<td align="center">🟡 <b>QUANTUM BETA</b></td>
+</tr>
+</table>
+
 ---
 
-## 🔧 **API Integration**
+<div align="center">
 
-### 🚀 **REST Endpoints**
+## 🔧 **QUANTUM API NEXUS** 🔧
 
-<table>
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="900" />
+
+</div>
+
+<table width="100%">
 <tr>
-<td width="50%">
+<td width="50%" align="center">
 
-**📡 Scan File**
-```http
-POST /api/scan
-Content-Type: multipart/form-data
+### 📡 **SCAN PORTAL**
+<img src="https://user-images.githubusercontent.com/74038190/212284094-e50ceae2-de86-4dd1-b7dd-3c1001fd7b2b.gif" width="100" />
 
-{
-  "file": "code_file.py"
-}
+```bash
+curl -X POST \
+  -F "file=@quantum_code.py" \
+  -H "X-Quantum-Key: your_api_key" \
+  http://localhost:5000/api/quantum/scan
 ```
 
 </td>
-<td width="50%">
+<td width="50%" align="center">
 
-**📊 Response**
+### 🌊 **RESPONSE WAVE**
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100" />
+
 ```json
 {
-  "status": "success",
-  "file": "code_file.py",
-  "language": "python",
-  "scan_time": 0.42,
-  "vulnerabilities": 3,
-  "risk_level": "high",
-  "issues": [...]
+  "quantum_status": "success",
+  "file_ocean": "quantum_code.py",
+  "language_tide": "python",
+  "scan_velocity": 0.42,
+  "vulnerability_waves": 3,
+  "risk_tsunami": "high",
+  "security_ocean": [...]
 }
 ```
 
@@ -333,176 +337,103 @@ Content-Type: multipart/form-data
 </tr>
 </table>
 
-### 🔌 **SDK Integration**
-
-<details>
-<summary><b>🐍 Python SDK</b></summary>
-
-```python
-import codeguard
-
-# Initialize scanner
-scanner = codeguard.SecurityScanner()
-
-# Scan file
-result = scanner.scan_file('app.py')
-
-# Get vulnerabilities
-for vuln in result.vulnerabilities:
-    print(f"{vuln.severity}: {vuln.description}")
-```
-
-</details>
-
-<details>
-<summary><b>🟨 JavaScript SDK</b></summary>
-
-```javascript
-const { CodeGuard } = require('@zerohack01/codeguard');
-
-const scanner = new CodeGuard({
-  endpoint: 'http://localhost:5000'
-});
-
-scanner.scanFile('app.js')
-  .then(result => {
-    console.log(`Found ${result.vulnerabilities} issues`);
-  });
-```
-
-</details>
-
 ---
-
-## ⚙️ **Configuration**
-
-### 🎛️ **Environment Setup**
-
-```bash
-# Server Configuration
-CODEGUARD_HOST=0.0.0.0
-CODEGUARD_PORT=5000
-CODEGUARD_DEBUG=false
-
-# Security Settings
-MAX_FILE_SIZE=10MB
-SCAN_TIMEOUT=30s
-ALLOWED_EXTENSIONS=py,js,ts,cpp,java,php,rb,go
-
-# Analysis Options
-ENABLE_AST_PARSING=true
-ENABLE_DEEP_SCAN=true
-SEVERITY_THRESHOLD=medium
-EXPORT_FORMAT=json,csv
-```
-
-### 🔧 **Custom Rules**
-
-```yaml
-# custom_rules.yaml
-rules:
-  - name: "Custom SQL Pattern"
-    pattern: "SELECT.*FROM.*WHERE.*=.*\\+"
-    severity: "high"
-    languages: ["php", "python"]
-    
-  - name: "API Key Exposure"
-    pattern: "(api_key|secret_key)\\s*=\\s*['\"][^'\"]{20,}['\"]"
-    severity: "critical"
-    languages: ["*"]
-```
-
----
-
-## 🧪 **Development**
-
-### 🔬 **Testing Framework**
-
-```bash
-# Run test suite
-pytest tests/ -v --cov=scanner
-
-# Performance benchmarks
-python benchmark.py --iterations=1000
-
-# Security validation
-python validate_patterns.py --ruleset=owasp
-```
-
-### 🛠️ **Contributing**
 
 <div align="center">
 
+## ⚙️ **QUANTUM CONFIGURATION** ⚙️
+
+<img src="https://user-images.githubusercontent.com/74038190/212281763-e6ecd7ef-c4aa-45b6-a97c-f33f6bb592bd.gif" width="900" />
+
+</div>
+
+<details>
+<summary><b>🌊 ENVIRONMENT OCEAN SETUP</b></summary>
+
+```bash
+# Quantum Server Configuration
+QUANTUM_HOST=0.0.0.0
+QUANTUM_PORT=5000
+QUANTUM_DEBUG=false
+QUANTUM_MODE=production
+
+# Security Ocean Settings
+MAX_FILE_TSUNAMI=10MB
+SCAN_WAVE_TIMEOUT=30s
+ALLOWED_FILE_CURRENTS=py,js,ts,cpp,java,php,rb,go
+
+# Analysis Wave Options
+ENABLE_QUANTUM_AST=true
+ENABLE_DEEP_OCEAN_SCAN=true
+SEVERITY_TIDE_THRESHOLD=medium
+EXPORT_WAVE_FORMAT=json,csv,xml
+
+# Quantum Performance
+WORKER_OCEAN_THREADS=8
+CACHE_WAVE_ENABLED=true
+MEMORY_TSUNAMI_LIMIT=512MB
 ```
-Fork → Clone → Branch → Code → Test → PR → Review → Merge
-  🍴     📥      🌿     💻     🧪    📤     👁️      ✅
+
+</details>
+
+---
+
+<div align="center">
+
+## 🧪 **DEVELOPMENT LABORATORY** 🧪
+
+<img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="900" />
+
+### 🌊 **CONTRIBUTION OCEAN**
+
+```
+Fork 🍴 → Clone 📥 → Branch 🌿 → Code 💻 → Test 🧪 → PR 📤 → Review 👁️ → Merge ✅
 ```
 
 </div>
 
 ```bash
-# Quick contribution setup
+# Quantum Development Setup
 git clone https://github.com/YourUsername/CodeGuard.git
 cd CodeGuard
-git checkout -b feature/awesome-enhancement
-make setup-dev
-make test
-git commit -m "feat: add awesome enhancement"
-git push origin feature/awesome-enhancement
+git checkout -b feature/quantum-enhancement
+python -m venv quantum_dev_env
+source quantum_dev_env/bin/activate
+pip install -r requirements-dev.txt
+pytest tests/ --quantum-mode
+git commit -m "🌊 feat: add quantum enhancement"
+git push origin feature/quantum-enhancement
 ```
 
 ---
 
-## 📊 **Performance Metrics**
-
 <div align="center">
+
+## 📊 **PERFORMANCE OCEAN** 📊
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
 
 <table>
 <tr>
 <td align="center">
-<img src="https://img.shields.io/badge/⚡_Speed-0.3s_avg-00FFFF?style=for-the-badge&labelColor=1a1a2e" /><br/>
-<b>Scan Speed</b>
+<img src="https://img.shields.io/badge/⚡_VELOCITY-0.3s-00D9FF?style=for-the-badge&labelColor=0a0a23" /><br/>
+<img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="80" /><br/>
+<b>Quantum Speed</b>
 </td>
 <td align="center">
-<img src="https://img.shields.io/badge/🎯_Accuracy-99.8%-00FF41?style=for-the-badge&labelColor=1a1a2e" /><br/>
-<b>Detection Rate</b>
+<img src="https://img.shields.io/badge/🎯_ACCURACY-99.8%-00FF88?style=for-the-badge&labelColor=0a0a23" /><br/>
+<img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="80" /><br/>
+<b>Detection Tsunami</b>
 </td>
 <td align="center">
-<img src="https://img.shields.io/badge/🔥_Patterns-50+-FF6B6B?style=for-the-badge&labelColor=1a1a2e" /><br/>
-<b>Security Rules</b>
+<img src="https://img.shields.io/badge/🔥_PATTERNS-50+-FF3366?style=for-the-badge&labelColor=0a0a23" /><br/>
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="80" /><br/>
+<b>Security Ocean</b>
 </td>
 <td align="center">
-<img src="https://img.shields.io/badge/🌐_Languages-8+-4ECDC4?style=for-the-badge&labelColor=1a1a2e" /><br/>
-<b>Supported</b>
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-## 📞 **Support Network**
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center">
-<img src="https://img.shields.io/badge/🐛_Issues-GitHub-black?style=for-the-badge&logo=github" /><br/>
-<a href="https://github.com/ZeroHack01/CodeGuard/issues">Report Bugs</a>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/💬_Chat-Discord-5865F2?style=for-the-badge&logo=discord" /><br/>
-<a href="#">Join Community</a>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/📧_Email-Contact-EA4335?style=for-the-badge&logo=gmail" /><br/>
-<a href="mailto:contact@zerohack01.dev">Get Support</a>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/📖_Docs-Wiki-4285F4?style=for-the-badge&logo=googledocs" /><br/>
-<a href="#">Documentation</a>
+<img src="https://img.shields.io/badge/🌐_LANGUAGES-8+-FFD700?style=for-the-badge&labelColor=0a0a23" /><br/>
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="80" /><br/>
+<b>Multi-Verse</b>
 </td>
 </tr>
 </table>
@@ -513,28 +444,64 @@ git push origin feature/awesome-enhancement
 
 <div align="center">
 
-## 🌟 **CodeGuard Security Scanner**
+## 📞 **SUPPORT UNIVERSE** 📞
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&pause=1000&color=00FFFF&center=true&vCenter=true&width=400&lines=Cross-Platform+Security;Modern+Development;Future-Ready+Scanner" alt="Footer" />
+<img src="https://user-images.githubusercontent.com/74038190/212284094-e50ceae2-de86-4dd1-b7dd-3c1001fd7b2b.gif" width="900" />
+
+<table>
+<tr>
+<td align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212281756-450d3ffa-9335-4b98-a965-db8a18fee927.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/🐛_ISSUES-GITHUB-black?style=for-the-badge&logo=github" /><br/>
+<a href="https://github.com/ZeroHack01/CodeGuard/issues">Report Quantum Bugs</a>
+</td>
+<td align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212281763-e6ecd7ef-c4aa-45b6-a97c-f33f6bb592bd.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/💬_CHAT-DISCORD-5865F2?style=for-the-badge&logo=discord" /><br/>
+<a href="#">Join Quantum Community</a>
+</td>
+<td align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212281780-0afd9616-8310-46e9-a898-c4f5269f1387.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/📧_EMAIL-SUPPORT-EA4335?style=for-the-badge&logo=gmail" /><br/>
+<a href="mailto:contact@zerohack01.dev">Quantum Support</a>
+</td>
+<td align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100" /><br/>
+<img src="https://img.shields.io/badge/📖_DOCS-WIKI-4285F4?style=for-the-badge&logo=googledocs" /><br/>
+<a href="#">Quantum Docs</a>
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+<!-- Animated Wave Footer -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=footer&text=Thank%20You&fontSize=50&fontColor=fff&animation=twinkling&fontAlignY=65&desc=For%20Diving%20Into%20CodeGuard%20Quantum%20Universe&descAlignY=85&descSize=16" />
+
+<div align="center">
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=900&size=30&pause=1000&color=00D9FF&center=true&vCenter=true&width=700&lines=🌊+CODEGUARD+QUANTUM+SCANNER+🌊;🔮+BUILT+FOR+THE+FUTURE+🔮;⭐+STAR+THIS+QUANTUM+REPO+⭐;🤝+JOIN+THE+SECURITY+OCEAN+🤝" />
 
 <br/>
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  🚀 Built for the Future of Secure Development             │
-│                                                             │
-│  ⭐ Star • 🔄 Fork • 🤝 Contribute • 📢 Share              │
-└─────────────────────────────────────────────────────────────┘
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║  🌊 Engineered in the Quantum Realm by @ZeroHack01 🌊                       ║
+║                                                                               ║
+║  🚀 Star • 🔄 Fork • 🤝 Contribute • 📢 Share the Quantum Wave              ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
 ```
 
-**Engineered by [@ZeroHack01](https://github.com/ZeroHack01)**
+![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=for-the-badge&logo=github&logoColor=00D9FF)
+![Website](https://img.shields.io/badge/Web-zerohack01.dev-blue?style=for-the-badge&logo=google-chrome&logoColor=00FF88)
+![Email](https://img.shields.io/badge/Email-contact-red?style=for-the-badge&logo=gmail&logoColor=FF3366)
 
-![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=flat-square&logo=github)
-![Website](https://img.shields.io/badge/Web-zerohack01.dev-blue?style=flat-square&logo=google-chrome)
-![Email](https://img.shields.io/badge/Email-contact-red?style=flat-square&logo=gmail)
+<br/>
 
----
+**📄 MIT License** • **⚡ Quantum Free** • **🌊 Open Source Ocean**
 
-**📄 MIT License** • **⚡ Free to Use** • **🌐 Open Source**
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900" />
 
 </div>
