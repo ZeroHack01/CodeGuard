@@ -439,47 +439,24 @@ curl -X GET http://localhost:5000/api/download/json/scan_results_2024
 | Method | Endpoint | Description | Parameters |
 |--------|----------|-------------|------------|
 | `POST` | `/api/scan` | Upload and analyze file | `file` (multipart/form-data) |
-| `GET` | `/api/scan/{scan_id}` | Get specific scan results | `scan_id` (string) |
-| `GET` | `/api/history` | List all scan history | `limit`, `offset` (optional) |
-| `GET` | `/api/download/{format}/{scan_id}` | Export scan results | `format` (json/csv/html) |
-| `DELETE` | `/api/scan/{scan_id}` | Delete scan results | `scan_id` (string) |
-| `GET` | `/api/stats` | Get scanning statistics | None |
-| `POST` | `/api/batch` | Batch scan multiple files | `files[]` (multipart/form-data) |
+| `GET` | `/` | Access web interface | None |
 
 ### 📝 **API Usage Examples**
 
 ```bash
-# Basic file scan
+# Upload and scan a file
 curl -X POST \
-  -F "file=@vulnerable_code.py" \
+  -F "file=@source_code.py" \
   -H "Accept: application/json" \
   http://localhost:5000/api/scan
 
-# Batch scanning
-curl -X POST \
-  -F "files=@app.py" \
-  -F "files=@config.js" \
-  -F "files=@database.sql" \
-  http://localhost:5000/api/batch
+# Test with vulnerable Python code
+echo 'eval(user_input)' > test.py
+curl -X POST -F "file=@test.py" http://localhost:5000/api/scan
 
-# Download results
-curl -X GET \
-  -H "Accept: application/json" \
-  http://localhost:5000/api/download/json/scan_20240611_123045 \
-  -o security_report.json
-
-# Get scan statistics
-curl -X GET http://localhost:5000/api/stats
-```
-
-### 🔐 **API Authentication (Optional)**
-
-```bash
-# If API authentication is enabled
-curl -X POST \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
-  -F "file=@secure_app.py" \
-  http://localhost:5000/api/scan
+# Test with hardcoded credentials
+echo 'password = "admin123"' > config.py  
+curl -X POST -F "file=@config.py" http://localhost:5000/api/scan
 ```
 
 ---
