@@ -18,27 +18,21 @@
 
 **🔍 Advanced static code analysis tool for comprehensive security vulnerability detection**
 
-[🚀 Quick Start](#installation) • [📱 Live Demo](#web-interface-preview) • [📖 Documentation](#usage-guide) • [🔧 API Reference](#api-reference) • [🌐 Languages](#supported-languages)
+[🚀 Quick Start](#installation) • [📱 Live Demo](#web-interface-preview) • [📖 Documentation](#usage-guide) • [🔧 API Reference](#api-reference) • [🌐 Languages](#supported-languages--frameworks)
 
 </div>
 
 ---
 
-## 🛡️ **What Makes CodeGuard Special**
-
-<div align="center">
-
-### **Powerful Security Analysis Engine**
+## 🛡️ **What CodeGuard Does**
 
 CodeGuard is a cutting-edge static code analyzer that identifies security vulnerabilities using advanced pattern matching and comprehensive code analysis across multiple programming languages.
-
-</div>
 
 <table>
 <tr>
 <td width="50%">
 
-### 🔍 **Advanced Security Detection**
+### 🔍 **Security Detection**
 - **Code Injection** - eval(), exec(), dynamic execution
 - **Authentication Flaws** - Hardcoded secrets & credentials  
 - **Command Injection** - System command vulnerabilities
@@ -65,7 +59,7 @@ CodeGuard is a cutting-edge static code analyzer that identifies security vulner
 
 ---
 
-## 🚀 **Installation & Setup**
+## 🚀 **Installation**
 
 <div align="center">
 
@@ -80,7 +74,7 @@ CodeGuard is a cutting-edge static code analyzer that identifies security vulner
 ### 🪟 **Windows**
 
 ```powershell
-# PowerShell (Admin recommended)
+# PowerShell
 git clone https://github.com/ZeroHack01/CodeGuard.git
 cd CodeGuard
 
@@ -89,7 +83,6 @@ python -m venv venv
 venv\Scripts\activate
 
 # Dependencies
-pip install --upgrade pip
 pip install -r requirements.txt
 
 # Launch Scanner
@@ -113,7 +106,6 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Dependencies
-pip3 install --upgrade pip
 pip3 install -r requirements.txt
 
 # Launch Scanner
@@ -157,7 +149,7 @@ python3 app.py
 <div align="center">
 
 ```bash
-# Option 1: Docker Hub (Recommended)
+# Option 1: Docker Hub
 docker pull zerohack01/codeguard:latest
 docker run -d -p 5000:5000 --name codeguard-scanner zerohack01/codeguard:latest
 
@@ -170,10 +162,9 @@ docker run -d -p 5000:5000 --name codeguard-scanner codeguard-scanner
 docker stop codeguard-scanner      # Stop container
 docker start codeguard-scanner     # Start container  
 docker rm codeguard-scanner        # Remove container
-docker logs codeguard-scanner      # View logs
 ```
 
-**🌐 Web Interface:** `http://localhost:5000` | **📡 API Endpoint:** `http://localhost:5000/api`
+**🌐 Web Interface:** `http://localhost:5000`
 
 </div>
 
@@ -187,7 +178,7 @@ docker logs codeguard-scanner      # View logs
 
 ![CodeGuard Dashboard](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/main/screenshots/dashboard.png)
 
-**🎯 Main Dashboard** - Clean, intuitive interface for uploading and managing code analysis
+**🎯 Main Dashboard** - Clean interface for uploading and managing code analysis
 
 </div>
 
@@ -221,35 +212,32 @@ docker logs codeguard-scanner      # View logs
 <tr>
 <td width="33%" align="center">
 
-### 🪟 **Windows Workflow**
+### 🪟 **Windows**
 1. **Launch** browser → `localhost:5000`
 2. **Upload** code files via drag-drop
-3. **Select** scan options & language
-4. **Execute** security analysis  
-5. **Review** detailed vulnerability report
-6. **Export** results in preferred format
+3. **Execute** security analysis  
+4. **Review** vulnerability report
+5. **Export** results if needed
 
 </td>
 <td width="33%" align="center">
 
-### 🍎 **macOS Workflow**
+### 🍎 **macOS**
 1. **Navigate** to `localhost:5000`
 2. **Drop** files into upload zone
-3. **Configure** analysis parameters
-4. **Run** comprehensive security scan
-5. **Analyze** results with recommendations  
-6. **Download** reports for review
+3. **Run** comprehensive scan
+4. **Analyze** results with recommendations  
+5. **Download** reports for review
 
 </td>
 <td width="33%" align="center">
 
-### 🐧 **Linux Workflow**
-1. **Access** via Firefox/Chrome: `localhost:5000`
-2. **Select** multiple files for batch scanning
-3. **Customize** security check preferences
-4. **Process** vulnerability analysis
-5. **Examine** color-coded severity results
-6. **Generate** exportable compliance reports
+### 🐧 **Linux**
+1. **Access** via browser: `localhost:5000`
+2. **Select** files for scanning
+3. **Process** vulnerability analysis
+4. **Examine** color-coded results
+5. **Generate** exportable reports
 
 </td>
 </tr>
@@ -259,113 +247,21 @@ docker logs codeguard-scanner      # View logs
 
 ```python
 # Python Integration
-from scanner import scan_file, scan_directory
+from scanner import scan_file
 
 # Single file analysis
 results = scan_file('vulnerable_app.py')
 for vulnerability in results:
     print(f"🚨 Line {vulnerability['line']}: {vulnerability['issue']}")
     print(f"   Severity: {vulnerability['severity']}")
-    print(f"   Fix: {vulnerability['recommendation']}")
-
-# Directory scanning
-batch_results = scan_directory('/path/to/project')
-print(f"📊 Total vulnerabilities found: {len(batch_results)}")
 ```
 
 ```bash
 # REST API Usage
-# Upload and scan file
 curl -X POST -F "file=@security_test.py" \
      -H "Content-Type: multipart/form-data" \
      http://localhost:5000/api/scan
-
-# Get scan history
-curl -X GET http://localhost:5000/api/history
-
-# Download specific report
-curl -X GET http://localhost:5000/api/download/json/scan_results_2024
 ```
-
----
-
-## 📊 **Live Example Output**
-
-<details>
-<summary><b>🔍 Real Security Scan Results</b></summary>
-
-```json
-{
-  "scan_metadata": {
-    "filename": "payment_processor.py",
-    "language": "python",
-    "file_size": "3.2 KB",
-    "scan_duration": "1.2s",
-    "timestamp": "2024-06-11T12:30:45Z"
-  },
-  "vulnerability_summary": {
-    "total_issues": 6,
-    "critical": 2,
-    "high": 3,
-    "medium": 1,
-    "low": 0,
-    "risk_score": 8.7
-  },
-  "detailed_findings": [
-    {
-      "line_number": 23,
-      "code_snippet": "eval(payment_data)",
-      "vulnerability_type": "Code Injection",
-      "severity": "CRITICAL",
-      "cwe_id": "CWE-94",
-      "description": "Arbitrary code execution through eval() function",
-      "impact": "Complete system compromise possible",
-      "recommendation": "Replace eval() with safe JSON parsing: json.loads(payment_data)",
-      "fix_complexity": "Easy",
-      "references": ["https://owasp.org/www-community/attacks/Code_Injection"]
-    },
-    {
-      "line_number": 8,
-      "code_snippet": "api_key = 'sk-prod-abc123xyz789'",
-      "vulnerability_type": "Hardcoded Credential",
-      "severity": "CRITICAL", 
-      "cwe_id": "CWE-798",
-      "description": "Production API key exposed in source code",
-      "impact": "Unauthorized access to payment systems",
-      "recommendation": "Use environment variables: api_key = os.getenv('PAYMENT_API_KEY')",
-      "fix_complexity": "Easy",
-      "references": ["https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure"]
-    },
-    {
-      "line_number": 45,
-      "code_snippet": "os.system(f'payment_cli --amount {amount}')",
-      "vulnerability_type": "Command Injection",
-      "severity": "HIGH",
-      "cwe_id": "CWE-78",
-      "description": "User input directly passed to system command",
-      "impact": "Remote code execution via payment amount manipulation",
-      "recommendation": "Use subprocess with parameterization and input validation",
-      "fix_complexity": "Medium",
-      "references": ["https://owasp.org/www-community/attacks/Command_Injection"]
-    }
-  ],
-  "recommendations": {
-    "immediate_actions": [
-      "Remove hardcoded credentials immediately",
-      "Replace eval() with safe parsing functions",
-      "Implement input validation and sanitization"
-    ],
-    "security_improvements": [
-      "Add comprehensive input validation",
-      "Implement proper error handling",
-      "Use parameterized queries for database operations",
-      "Enable security logging and monitoring"
-    ]
-  }
-}
-```
-
-</details>
 
 ---
 
@@ -373,178 +269,186 @@ curl -X GET http://localhost:5000/api/download/json/scan_results_2024
 
 <div align="center">
 
-| Language | Extensions | Security Patterns | Framework Support |
-|----------|------------|-------------------|-------------------|
-| 🐍 **Python** | `.py` `.pyw` `.pyc` | eval(), exec(), os.system(), pickle.loads() | Django, Flask, FastAPI |
-| 🟨 **JavaScript** | `.js` `.jsx` `.mjs` | innerHTML, eval(), document.write() | React, Vue, Angular |
-| ⚡ **TypeScript** | `.ts` `.tsx` `.d.ts` | Type safety issues, XSS vulnerabilities | Angular, React TS |
-| 🔵 **C/C++** | `.c` `.cpp` `.h` `.hpp` | gets(), strcpy(), malloc(), system() | Native, Qt, Boost |
-| ☕ **Java** | `.java` `.jar` `.class` | Runtime.exec(), reflection, deserialization | Spring, Struts, JSF |
-| 🐘 **PHP** | `.php` `.phtml` `.php3` | eval(), shell_exec(), include(), mysqli | Laravel, Symfony, CodeIgniter |
-| 💎 **Ruby** | `.rb` `.rbw` `.rake` | eval(), system(), send(), constantize() | Rails, Sinatra, Hanami |
-| 🐹 **Go** | `.go` `.mod` `.sum` | exec.Command(), unsafe.Pointer, sql.Query | Gin, Echo, Fiber |
-| 🌐 **HTML/CSS** | `.html` `.htm` `.css` | Script injection, unsafe protocols | Bootstrap, Tailwind |
-
-</div>
-
-### **🔧 Advanced Detection Capabilities**
-
-<div align="center">
-
-### **📊 Security Pattern Detection - Circular Analysis**
+### **📊 Language Detection Coverage - Circular Statistics**
 
 <table>
 <tr>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **🐍 Python**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#3776ab" stroke-width="8" fill="none"
-          stroke-dasharray="238" stroke-dashoffset="12" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#3776ab">95%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#3776ab" stroke-width="12" fill="none"
+          stroke-dasharray="357" stroke-dashoffset="18" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#3776ab">95%</text>
 </svg>
 
-**Django, Flask, FastAPI**
-*eval(), exec(), pickle.loads()*
+**Extensions:** `.py .pyw .pyc`
+**Frameworks:** Django, Flask, FastAPI
+**Patterns:** eval(), exec(), os.system(), pickle.loads()
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **🟨 JavaScript**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#f7df1e" stroke-width="8" fill="none"
-          stroke-dasharray="226" stroke-dashoffset="25" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">90%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#f7df1e" stroke-width="12" fill="none"
+          stroke-dasharray="339" stroke-dashoffset="36" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">90%</text>
 </svg>
 
-**React, Vue, Angular**
-*innerHTML, eval(), XSS*
+**Extensions:** `.js .jsx .mjs`
+**Frameworks:** React, Vue, Angular
+**Patterns:** innerHTML, eval(), document.write()
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **⚡ TypeScript**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#3178c6" stroke-width="8" fill="none"
-          stroke-dasharray="221" stroke-dashoffset="30" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#3178c6">88%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#3178c6" stroke-width="12" fill="none"
+          stroke-dasharray="331" stroke-dashoffset="45" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#3178c6">88%</text>
 </svg>
 
-**Angular, React TS**
-*Type safety bypass*
+**Extensions:** `.ts .tsx .d.ts`
+**Frameworks:** Angular, React TS
+**Patterns:** Type safety issues, XSS vulnerabilities
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **🔵 C/C++**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#00599c" stroke-width="8" fill="none"
-          stroke-dasharray="214" stroke-dashoffset="37" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#00599c">85%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#00599c" stroke-width="12" fill="none"
+          stroke-dasharray="320" stroke-dashoffset="56" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#00599c">85%</text>
 </svg>
 
-**Native, Qt, Boost**
-*gets(), strcpy(), malloc()*
-
-</td>
-<td align="center" width="20%">
-
-**☕ Java**
-
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#ed8b00" stroke-width="8" fill="none"
-          stroke-dasharray="206" stroke-dashoffset="45" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#ed8b00">82%</text>
-</svg>
-
-**Spring, Struts, JSF**
-*Runtime.exec(), reflection*
+**Extensions:** `.c .cpp .h .hpp`
+**Frameworks:** Native, Qt, Boost
+**Patterns:** gets(), strcpy(), malloc(), system()
 
 </td>
 </tr>
 <tr>
-<td align="center" width="20%">
+<td align="center" width="25%">
+
+**☕ Java**
+
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#ed8b00" stroke-width="12" fill="none"
+          stroke-dasharray="309" stroke-dashoffset="67" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#ed8b00">82%</text>
+</svg>
+
+**Extensions:** `.java .jar .class`
+**Frameworks:** Spring, Struts, JSF
+**Patterns:** Runtime.exec(), reflection, deserialization
+
+</td>
+<td align="center" width="25%">
 
 **🐘 PHP**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#777bb4" stroke-width="8" fill="none"
-          stroke-dasharray="201" stroke-dashoffset="50" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#777bb4">80%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#777bb4" stroke-width="12" fill="none"
+          stroke-dasharray="301" stroke-dashoffset="75" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#777bb4">80%</text>
 </svg>
 
-**Laravel, Symfony**
-*eval(), shell_exec(), include()*
+**Extensions:** `.php .phtml .php3`
+**Frameworks:** Laravel, Symfony, CodeIgniter
+**Patterns:** eval(), shell_exec(), include(), mysqli
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **💎 Ruby**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#cc342d" stroke-width="8" fill="none"
-          stroke-dasharray="196" stroke-dashoffset="55" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#cc342d">78%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#cc342d" stroke-width="12" fill="none"
+          stroke-dasharray="293" stroke-dashoffset="83" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#cc342d">78%</text>
 </svg>
 
-**Rails, Sinatra, Hanami**
-*eval(), system(), send()*
+**Extensions:** `.rb .rbw .rake`
+**Frameworks:** Rails, Sinatra, Hanami
+**Patterns:** eval(), system(), send(), constantize()
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
 **🐹 Go**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#00add8" stroke-width="8" fill="none"
-          stroke-dasharray="188" stroke-dashoffset="63" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#00add8">75%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#00add8" stroke-width="12" fill="none"
+          stroke-dasharray="282" stroke-dashoffset="94" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#00add8">75%</text>
 </svg>
 
-**Gin, Echo, Fiber**
-*exec.Command(), unsafe.Pointer*
+**Extensions:** `.go .mod .sum`
+**Frameworks:** Gin, Echo, Fiber
+**Patterns:** exec.Command(), unsafe.Pointer, sql.Query
 
 </td>
-<td align="center" width="20%">
+</tr>
+<tr>
+<td align="center" width="25%">
 
 **🌐 HTML/CSS**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#e34f26" stroke-width="8" fill="none"
-          stroke-dasharray="176" stroke-dashoffset="75" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#e34f26">70%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#e34f26" stroke-width="12" fill="none"
+          stroke-dasharray="264" stroke-dashoffset="113" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#e34f26">70%</text>
 </svg>
 
-**Bootstrap, Tailwind**
-*Script injection, protocols*
+**Extensions:** `.html .htm .css`
+**Frameworks:** Bootstrap, Tailwind
+**Patterns:** Script injection, unsafe protocols
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="25%">
 
-### **🎯 Total**
+### **🎯 Overall Coverage**
 
-<svg width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
-  <circle cx="50" cy="50" r="40" stroke="#10b981" stroke-width="8" fill="none"
-          stroke-dasharray="208" stroke-dashoffset="43" stroke-linecap="round" transform="rotate(-90 50 50)"/>
-  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#10b981">83%</text>
+<svg width="140" height="140">
+  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+  <circle cx="70" cy="70" r="60" stroke="#10b981" stroke-width="12" fill="none"
+          stroke-dasharray="312" stroke-dashoffset="64" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#10b981">83%</text>
 </svg>
 
-**Multi-Framework**
-*248 Security Patterns*
+**Total Languages:** 9
+**Security Patterns:** 248+
+**Framework Support:** Multi-Platform
+
+</td>
+<td align="center" width="50%">
+
+### **📈 Detection Statistics**
+
+**🔴 Critical Vulnerabilities:** 47%
+**🟠 High Severity Issues:** 31%
+**🟡 Medium Risk Patterns:** 16%
+**🟢 Low Priority Items:** 6%
+
+**📊 Total Patterns Detected:** 248
+**🛡️ Security Coverage:** 83% Average
+**⚡ Scan Performance:** < 2 seconds
 
 </td>
 </tr>
@@ -554,9 +458,9 @@ curl -X GET http://localhost:5000/api/download/json/scan_results_2024
 
 ---
 
-## 🔧 **API Documentation**
+## 🔧 **API Reference**
 
-### 📡 **REST API Endpoints**
+### 📡 **Available Endpoints**
 
 | Method | Endpoint | Description | Parameters |
 |--------|----------|-------------|------------|
@@ -581,130 +485,122 @@ echo 'password = "admin123"' > config.py
 curl -X POST -F "file=@config.py" http://localhost:5000/api/scan
 ```
 
+### 📋 **Response Format**
+
+```json
+{
+  "success": true,
+  "filename": "source_code.py",
+  "language": "python",
+  "issues": [
+    {
+      "line": 15,
+      "code": "eval(data)",
+      "issue": "Code Injection",
+      "severity": "Critical"
+    }
+  ],
+  "total_issues": 1
+}
+```
+
 ---
 
-## ⚙️ **Advanced Configuration**
+## 📊 **Sample Output**
 
 <details>
-<summary><b>🔧 Environment Variables & Settings</b></summary>
+<summary><b>🔍 Example scan results</b></summary>
 
-```bash
-# Server Configuration
-export CODEGUARD_HOST=0.0.0.0              # Bind address
-export CODEGUARD_PORT=5000                  # Port number
-export CODEGUARD_DEBUG=false                # Debug mode
-export CODEGUARD_WORKERS=4                  # Worker processes
-
-# Security Settings
-export MAX_FILE_SIZE=52428800               # 50MB file limit
-export UPLOAD_TIMEOUT=60                    # Upload timeout (seconds)
-export SCAN_TIMEOUT=300                     # Scan timeout (seconds)
-export RATE_LIMIT=100                       # Requests per minute
-
-# Analysis Configuration
-export ENABLE_AST_ANALYSIS=true             # Advanced syntax tree analysis
-export DEEP_SCAN_MODE=false                 # Resource-intensive deep scanning
-export CUSTOM_RULES_PATH=/path/to/rules     # Custom security rules
-export SEVERITY_THRESHOLD=medium            # Minimum severity to report
-
-# Output Options
-export DEFAULT_EXPORT_FORMAT=json           # Default export format
-export INCLUDE_FIX_SUGGESTIONS=true         # Include auto-fix recommendations
-export GENERATE_COMPLIANCE_REPORT=false     # Generate compliance reports
-export REPORT_TEMPLATE_PATH=/path/templates # Custom report templates
-
-# Database & Storage
-export DATABASE_URL=sqlite:///codeguard.db  # Database connection
-export RESULT_RETENTION_DAYS=30             # How long to keep results
-export ENABLE_RESULT_CACHING=true           # Cache scan results
-
-# Integrations
-export SLACK_WEBHOOK_URL=https://hooks...   # Slack notifications
-export EMAIL_SMTP_SERVER=smtp.gmail.com     # Email server
-export JIRA_INTEGRATION=false               # JIRA ticket creation
+```json
+{
+  "filename": "app.py",
+  "language": "python",
+  "scan_time": 0.8,
+  "issues": [
+    {
+      "line": 23,
+      "code": "eval(user_input)",
+      "issue": "Code Injection",
+      "severity": "Critical",
+      "description": "Dynamic code execution detected"
+    },
+    {
+      "line": 15,
+      "code": "password = 'admin123'",
+      "issue": "Hardcoded Password",
+      "severity": "High",
+      "description": "Credentials found in source code"
+    },
+    {
+      "line": 31,
+      "code": "os.system(command)",
+      "issue": "Command Injection",
+      "severity": "High",
+      "description": "System command execution risk"
+    }
+  ],
+  "summary": {
+    "total_issues": 3,
+    "critical": 1,
+    "high": 2,
+    "medium": 0
+  }
+}
 ```
 
 </details>
 
 ---
 
-## 🧪 **Testing & Quality Assurance**
+## 🧪 **Testing CodeGuard**
 
-### 🔬 **Built-in Test Suite**
-
-```bash
-# Run comprehensive tests
-python -m pytest tests/ -v --cov=scanner
-
-# Test specific vulnerability types
-python test_injection_detection.py
-python test_authentication_flaws.py
-python test_cryptography_issues.py
-
-# Performance benchmarking
-python benchmark_scanner.py --files 1000 --iterations 10
-```
-
-### 📋 **Sample Vulnerable Code for Testing**
-
-Create test files to verify CodeGuard detection:
+Create a test file with known vulnerabilities:
 
 ```python
-# test_vulnerabilities.py - Python test case
-import os
-import pickle
-
-# Critical: Hardcoded credentials
-api_secret = "sk-prod-1234567890abcdef"
-database_password = "admin123!@#"
-
-# Critical: Code injection
-user_input = input("Enter calculation: ")
-result = eval(user_input)  # Never do this!
-
-# High: Command injection  
-filename = input("Enter filename: ")
-os.system(f"cat {filename}")  # Dangerous!
-
-# High: Insecure deserialization
-with open('user_data.pkl', 'rb') as f:
-    data = pickle.load(f)  # Can execute arbitrary code
-
-# Medium: Weak random generation
-import random
-session_token = str(random.randint(1000, 9999))
+# test_vulnerable.py
+api_key = "sk-1234567890abcdef"    # Hardcoded credential
+user_code = input("Enter code: ")
+eval(user_code)                    # Code injection
+os.system("ls " + user_path)       # Command injection
 ```
 
-```javascript
-// test_vulnerabilities.js - JavaScript test case
-// Critical: XSS vulnerability
-function displayUserContent(content) {
-    document.getElementById('output').innerHTML = content; // Dangerous!
-}
-
-// High: eval() usage
-const userCode = prompt("Enter JavaScript code:");
-eval(userCode); // Never do this!
-
-// Medium: Insecure random
-const sessionId = Math.random().toString(); // Predictable
-```
-
-**Expected Results:** CodeGuard should detect 6+ vulnerabilities across these test files.
+Expected result: 3 security issues detected
 
 ---
 
-## 🤝 **Contributing & Community**
+## ⚙️ **Configuration**
 
-### 🌟 **How to Contribute**
+<details>
+<summary><b>🔧 Environment Settings</b></summary>
+
+```bash
+# Server Configuration
+FLASK_HOST=0.0.0.0              # Bind address
+FLASK_PORT=5000                 # Port number
+FLASK_DEBUG=false               # Debug mode
+
+# File Processing
+MAX_FILE_SIZE=10485760          # 10MB limit
+UPLOAD_TIMEOUT=30               # 30 seconds
+
+# Scanner Options
+SEVERITY_THRESHOLD=medium       # Minimum severity to report
+EXPORT_FORMATS=json,csv         # Available export formats
+```
+
+</details>
+
+---
+
+## 🤝 **Contributing**
 
 1. **Fork** the repository
 2. **Create** feature branch: `git checkout -b feature/amazing-detection`
 3. **Implement** your security improvements  
-4. **Add** comprehensive tests for new detection rules
-5. **Commit** changes: `git commit -m "Add advanced XSS detection"`
+4. **Add** comprehensive tests
+5. **Commit** changes: `git commit -m "Add new feature"`
 6. **Push** to branch: `git push origin feature/amazing-detection`
-7. **Submit** Pull Request with detailed description
+7. **Submit** Pull Request
 
 ### 🐛 **Bug Reports & Feature Requests**
 
@@ -712,30 +608,9 @@ const sessionId = Math.random().toString(); // Predictable
 - **💡 Feature Requests:** Create [GitHub Issues](https://github.com/ZeroHack01/CodeGuard/issues) with enhancement label
 - **🔒 Security Issues:** Email [mongwoiching2080@gmail.com](mailto:mongwoiching2080@gmail.com) for responsible disclosure
 
-### 📚 **Development Setup**
-
-```bash
-# Development environment
-git clone https://github.com/ZeroHack01/CodeGuard.git
-cd CodeGuard
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run in development mode
-export FLASK_ENV=development
-export FLASK_DEBUG=true
-python app.py
-
-# Code formatting and linting
-black . --line-length 88
-flake8 . --max-line-length 88
-mypy scanner/ --strict
-```
-
 ---
 
-## 📄 **License & Legal**
+## 📄 **License**
 
 This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for complete terms.
 
@@ -743,23 +618,6 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 - **Flask** - Web framework for the interface
 - **Werkzeug** - WSGI web application library
 - **Other dependencies** - See `requirements.txt` for complete list
-
----
-
-## 📈 **Project Statistics**
-
-<div align="center">
-
-![GitHub stars](https://img.shields.io/github/stars/ZeroHack01/CodeGuard?style=social)
-![GitHub forks](https://img.shields.io/github/forks/ZeroHack01/CodeGuard?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/ZeroHack01/CodeGuard?style=social)
-
-![GitHub issues](https://img.shields.io/github/issues/ZeroHack01/CodeGuard)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/ZeroHack01/CodeGuard)
-![GitHub last commit](https://img.shields.io/github/last-commit/ZeroHack01/CodeGuard)
-![GitHub code size](https://img.shields.io/github/languages/code-size/ZeroHack01/CodeGuard)
-
-</div>
 
 ---
 
@@ -772,13 +630,10 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 
 <br/>
 
-**[🐛 Report Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💼 LinkedIn](https://www.linkedin.com/in/mongwoi/) • [📧 Email](mailto:mongwoiching2080@gmail.com) • [🌟 Star this repo](https://github.com/ZeroHack01/CodeGuard)**
+**[🐛 Report Issues](https://github.com/ZeroHack01/CodeGuard/issues) • [💼 LinkedIn](https://www.linkedin.com/in/mongwoi/) • [📧 Email](mailto:mongwoiching2080@gmail.com)**
 
-[![GitHub followers](https://img.shields.io/github/followers/ZeroHack01?style=social)](https://github.com/ZeroHack01)
-[![Twitter Follow](https://img.shields.io/twitter/follow/ZeroHack01?style=social)](https://twitter.com/ZeroHack01)
+[![GitHub](https://img.shields.io/badge/GitHub-ZeroHack01-black?style=flat-square&logo=github)](https://github.com/ZeroHack01)
 
 **⭐ Star this repository if CodeGuard helped secure your code!**
-
-*Trusted by developers worldwide for comprehensive security analysis*
 
 </div>
