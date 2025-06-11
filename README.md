@@ -173,7 +173,27 @@ docker rm codeguard
 
 ## 📖 **Usage Guide**
 
-### 🖥️ **Web Interface**
+### 🖥️ **Web Interface Preview**
+
+<div align="center">
+
+![CodeGuard Dashboard](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/master/screenshots/dashboard.png)
+
+*CodeGuard web dashboard with file upload interface*
+
+</div>
+
+### 📊 **Scan Results Example**
+
+<div align="center">
+
+![Scan Results](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/master/screenshots/results.png)
+
+*Real-time vulnerability detection results with severity levels*
+
+</div>
+
+### 🖥️ **Platform Usage**
 
 <table>
 <tr>
