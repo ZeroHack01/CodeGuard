@@ -611,8 +611,8 @@ const sessionId = Math.random().toString(); // Predictable
 ### 🐛 **Bug Reports & Feature Requests**
 
 - **🐛 Bug Reports:** Use [GitHub Issues](https://github.com/ZeroHack01/CodeGuard/issues) with detailed reproduction steps
-- **💡 Feature Requests:** Open [GitHub Discussions](https://github.com/ZeroHack01/CodeGuard/discussions) with use cases
-- **🔒 Security Issues:** Email security@codeguard.dev for responsible disclosure
+- **💡 Feature Requests:** Create [GitHub Issues](https://github.com/ZeroHack01/CodeGuard/issues) with enhancement label
+- **🔒 Security Issues:** Email [mongwoiching2080@gmail.com](mailto:mongwoiching2080@gmail.com) for responsible disclosure
 
 ### 📚 **Development Setup**
 
