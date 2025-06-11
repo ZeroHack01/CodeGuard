@@ -269,190 +269,69 @@ curl -X POST -F "file=@security_test.py" \
 
 <div align="center">
 
-### **📊 Language Detection Coverage - Circular Statistics**
+### **📊 Language Support Distribution - Circle Graph**
 
-<table>
-<tr>
-<td align="center" width="25%">
-
-**🐍 Python**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#3776ab" stroke-width="12" fill="none"
-          stroke-dasharray="357" stroke-dashoffset="18" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#3776ab">95%</text>
+<svg width="400" height="400" viewBox="0 0 400 400">
+  <!-- Python: 95% coverage - largest slice -->
+  <path d="M 200,200 L 200,50 A 150,150 0 0,1 326.77,123.23 Z" fill="#3776ab" stroke="white" stroke-width="3"/>
+  <text x="250" y="80" fill="white" font-weight="bold" font-size="14">Python 95%</text>
+  
+  <!-- JavaScript: 90% coverage -->
+  <path d="M 200,200 L 326.77,123.23 A 150,150 0 0,1 350,200 Z" fill="#f7df1e" stroke="white" stroke-width="3"/>
+  <text x="330" y="150" fill="black" font-weight="bold" font-size="12">JS 90%</text>
+  
+  <!-- TypeScript: 88% coverage -->
+  <path d="M 200,200 L 350,200 A 150,150 0 0,1 326.77,276.77 Z" fill="#3178c6" stroke="white" stroke-width="3"/>
+  <text x="330" y="240" fill="white" font-weight="bold" font-size="12">TS 88%</text>
+  
+  <!-- C/C++: 85% coverage -->
+  <path d="M 200,200 L 326.77,276.77 A 150,150 0 0,1 276.77,326.77 Z" fill="#00599c" stroke="white" stroke-width="3"/>
+  <text x="300" y="310" fill="white" font-weight="bold" font-size="12">C++ 85%</text>
+  
+  <!-- Java: 82% coverage -->
+  <path d="M 200,200 L 276.77,326.77 A 150,150 0 0,1 200,350 Z" fill="#ed8b00" stroke="white" stroke-width="3"/>
+  <text x="220" y="340" fill="white" font-weight="bold" font-size="12">Java 82%</text>
+  
+  <!-- PHP: 80% coverage -->
+  <path d="M 200,200 L 200,350 A 150,150 0 0,1 123.23,326.77 Z" fill="#777bb4" stroke="white" stroke-width="3"/>
+  <text x="150" y="340" fill="white" font-weight="bold" font-size="12">PHP 80%</text>
+  
+  <!-- Ruby: 78% coverage -->
+  <path d="M 200,200 L 123.23,326.77 A 150,150 0 0,1 73.23,276.77 Z" fill="#cc342d" stroke="white" stroke-width="3"/>
+  <text x="80" y="310" fill="white" font-weight="bold" font-size="12">Ruby 78%</text>
+  
+  <!-- Go: 75% coverage -->
+  <path d="M 200,200 L 73.23,276.77 A 150,150 0 0,1 50,200 Z" fill="#00add8" stroke="white" stroke-width="3"/>
+  <text x="60" y="240" fill="white" font-weight="bold" font-size="12">Go 75%</text>
+  
+  <!-- HTML/CSS: 70% coverage -->
+  <path d="M 200,200 L 50,200 A 150,150 0 0,1 73.23,123.23 Z" fill="#e34f26" stroke="white" stroke-width="3"/>
+  <text x="60" y="150" fill="white" font-weight="bold" font-size="12">HTML 70%</text>
+  
+  <!-- Complete the circle back to Python -->
+  <path d="M 200,200 L 73.23,123.23 A 150,150 0 0,1 200,50 Z" fill="#6b7280" stroke="white" stroke-width="3"/>
+  <text x="120" y="80" fill="white" font-weight="bold" font-size="12">Other</text>
+  
+  <!-- Center circle -->
+  <circle cx="200" cy="200" r="70" fill="white" stroke="#e5e7eb" stroke-width="3"/>
+  <text x="200" y="195" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">CodeGuard</text>
+  <text x="200" y="215" text-anchor="middle" font-size="14" fill="#666">Language</text>
+  <text x="200" y="230" text-anchor="middle" font-size="14" fill="#666">Support</text>
 </svg>
 
-**Extensions:** `.py .pyw .pyc`
-**Frameworks:** Django, Flask, FastAPI
-**Patterns:** eval(), exec(), os.system(), pickle.loads()
+### **📋 Language Support Details**
 
-</td>
-<td align="center" width="25%">
-
-**🟨 JavaScript**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#f7df1e" stroke-width="12" fill="none"
-          stroke-dasharray="339" stroke-dashoffset="36" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">90%</text>
-</svg>
-
-**Extensions:** `.js .jsx .mjs`
-**Frameworks:** React, Vue, Angular
-**Patterns:** innerHTML, eval(), document.write()
-
-</td>
-<td align="center" width="25%">
-
-**⚡ TypeScript**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#3178c6" stroke-width="12" fill="none"
-          stroke-dasharray="331" stroke-dashoffset="45" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#3178c6">88%</text>
-</svg>
-
-**Extensions:** `.ts .tsx .d.ts`
-**Frameworks:** Angular, React TS
-**Patterns:** Type safety issues, XSS vulnerabilities
-
-</td>
-<td align="center" width="25%">
-
-**🔵 C/C++**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#00599c" stroke-width="12" fill="none"
-          stroke-dasharray="320" stroke-dashoffset="56" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#00599c">85%</text>
-</svg>
-
-**Extensions:** `.c .cpp .h .hpp`
-**Frameworks:** Native, Qt, Boost
-**Patterns:** gets(), strcpy(), malloc(), system()
-
-</td>
-</tr>
-<tr>
-<td align="center" width="25%">
-
-**☕ Java**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#ed8b00" stroke-width="12" fill="none"
-          stroke-dasharray="309" stroke-dashoffset="67" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#ed8b00">82%</text>
-</svg>
-
-**Extensions:** `.java .jar .class`
-**Frameworks:** Spring, Struts, JSF
-**Patterns:** Runtime.exec(), reflection, deserialization
-
-</td>
-<td align="center" width="25%">
-
-**🐘 PHP**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#777bb4" stroke-width="12" fill="none"
-          stroke-dasharray="301" stroke-dashoffset="75" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#777bb4">80%</text>
-</svg>
-
-**Extensions:** `.php .phtml .php3`
-**Frameworks:** Laravel, Symfony, CodeIgniter
-**Patterns:** eval(), shell_exec(), include(), mysqli
-
-</td>
-<td align="center" width="25%">
-
-**💎 Ruby**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#cc342d" stroke-width="12" fill="none"
-          stroke-dasharray="293" stroke-dashoffset="83" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#cc342d">78%</text>
-</svg>
-
-**Extensions:** `.rb .rbw .rake`
-**Frameworks:** Rails, Sinatra, Hanami
-**Patterns:** eval(), system(), send(), constantize()
-
-</td>
-<td align="center" width="25%">
-
-**🐹 Go**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#00add8" stroke-width="12" fill="none"
-          stroke-dasharray="282" stroke-dashoffset="94" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#00add8">75%</text>
-</svg>
-
-**Extensions:** `.go .mod .sum`
-**Frameworks:** Gin, Echo, Fiber
-**Patterns:** exec.Command(), unsafe.Pointer, sql.Query
-
-</td>
-</tr>
-<tr>
-<td align="center" width="25%">
-
-**🌐 HTML/CSS**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#e34f26" stroke-width="12" fill="none"
-          stroke-dasharray="264" stroke-dashoffset="113" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#e34f26">70%</text>
-</svg>
-
-**Extensions:** `.html .htm .css`
-**Frameworks:** Bootstrap, Tailwind
-**Patterns:** Script injection, unsafe protocols
-
-</td>
-<td align="center" width="25%">
-
-### **🎯 Overall Coverage**
-
-<svg width="140" height="140">
-  <circle cx="70" cy="70" r="60" stroke="#e5e7eb" stroke-width="12" fill="none"/>
-  <circle cx="70" cy="70" r="60" stroke="#10b981" stroke-width="12" fill="none"
-          stroke-dasharray="312" stroke-dashoffset="64" stroke-linecap="round" transform="rotate(-90 70 70)"/>
-  <text x="70" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#10b981">83%</text>
-</svg>
-
-**Total Languages:** 9
-**Security Patterns:** 248+
-**Framework Support:** Multi-Platform
-
-</td>
-<td align="center" width="50%">
-
-### **📈 Detection Statistics**
-
-**🔴 Critical Vulnerabilities:** 47%
-**🟠 High Severity Issues:** 31%
-**🟡 Medium Risk Patterns:** 16%
-**🟢 Low Priority Items:** 6%
-
-**📊 Total Patterns Detected:** 248
-**🛡️ Security Coverage:** 83% Average
-**⚡ Scan Performance:** < 2 seconds
-
-</td>
-</tr>
-</table>
+| Language | Extensions | Security Patterns | Framework Support |
+|----------|------------|-------------------|-------------------|
+| 🐍 **Python** | `.py .pyw .pyc` | eval(), exec(), os.system(), pickle.loads() | Django, Flask, FastAPI |
+| 🟨 **JavaScript** | `.js .jsx .mjs` | innerHTML, eval(), document.write() | React, Vue, Angular |
+| ⚡ **TypeScript** | `.ts .tsx .d.ts` | Type safety issues, XSS vulnerabilities | Angular, React TS |
+| 🔵 **C/C++** | `.c .cpp .h .hpp` | gets(), strcpy(), malloc(), system() | Native, Qt, Boost |
+| ☕ **Java** | `.java .jar .class` | Runtime.exec(), reflection, deserialization | Spring, Struts, JSF |
+| 🐘 **PHP** | `.php .phtml .php3` | eval(), shell_exec(), include(), mysqli | Laravel, Symfony, CodeIgniter |
+| 💎 **Ruby** | `.rb .rbw .rake` | eval(), system(), send(), constantize() | Rails, Sinatra, Hanami |
+| 🐹 **Go** | `.go .mod .sum` | exec.Command(), unsafe.Pointer, sql.Query | Gin, Echo, Fiber |
+| 🌐 **HTML/CSS** | `.html .htm .css` | Script injection, unsafe protocols | Bootstrap, Tailwind |
 
 </div>
 
