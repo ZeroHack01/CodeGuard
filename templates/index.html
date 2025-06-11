@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeGuard - Enterprise Security Analysis Platform</title>
+    <title>CodeGuard - Static Code Security Analysis Platform</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
         
@@ -119,6 +119,9 @@
             font-size: 1.8rem;
             box-shadow: 0 8px 25px rgba(0, 217, 255, 0.4);
             animation: pulse 3s ease-in-out infinite;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+            color: var(--white);
         }
 
         @keyframes pulse {
@@ -1047,6 +1050,28 @@
             font-weight: 500;
         }
 
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--brand-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -1100,14 +1125,14 @@
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">
-                    <div class="logo-icon">🛡️</div>
+                    <div class="logo-icon">&lt;/&gt;</div>
                     <span class="logo-text">CodeGuard</span>
                 </a>
                 
                 <nav class="nav">
-                    <a href="#analyzer" class="nav-item">Security Scanner</a>
-                    <a href="#features" class="nav-item">Detection Engine</a>
-                    <a href="#stats" class="nav-item">Intelligence</a>
+                    <a href="#analyzer" class="nav-item">Code Scanner</a>
+                    <a href="#features" class="nav-item">Security Analysis</a>
+                    <a href="#stats" class="nav-item">Platform Stats</a>
                 </nav>
 
                 <div class="nav-stats">
@@ -1134,12 +1159,12 @@
             <section class="hero">
                 <div class="hero-badge">
                     <span class="bug-icon">🐞</span>
-                    Enterprise-grade security analysis platform
+                    Advanced static code security analysis platform
                 </div>
-                <h1 class="hero-title">Secure Code Intelligence</h1>
+                <h1 class="hero-title">Secure Code Analysis Platform</h1>
                 <p class="hero-subtitle">
-                    Advanced static code analysis with real-time vulnerability detection, intelligent pattern recognition, 
-                    and comprehensive security reporting for modern development teams.
+                    Static code analysis with real-time vulnerability detection, intelligent pattern matching, 
+                    and comprehensive security analysis for secure software development.
                 </p>
                 <div class="hero-actions">
                     <a href="#analyzer" class="btn btn-primary">
@@ -1159,10 +1184,10 @@
                 <section id="analyzer" class="analysis-platform">
                     <div class="platform-content">
                         <div class="platform-header">
-                            <h2 class="platform-title">Code Analysis Engine</h2>
+                            <h2 class="platform-title">Static Code Analysis Engine</h2>
                             <p class="platform-subtitle">
                                 Upload your source code and execute comprehensive security analysis with 
-                                intelligent vulnerability detection and detailed reporting.
+                                automated vulnerability detection and detailed code security reporting.
                             </p>
                         </div>
 
@@ -1231,14 +1256,18 @@
                         </div>
 
                         <div class="export-section" id="exportSection">
-                            <h3 style="margin-bottom: 1rem; color: var(--primary);">📤 Export Security Report</h3>
+                            <h3 style="margin-bottom: 1rem; color: var(--primary);">📤 Export Intelligence Report</h3>
                             <div class="export-buttons">
-                                <button class="btn btn-primary" onclick="exportResults('json')">
+                                <button class="btn btn-primary" onclick="exportResults('pdf')">
                                     <span>📄</span>
+                                    Export PDF
+                                </button>
+                                <button class="btn btn-primary" onclick="exportResults('json')">
+                                    <span>📊</span>
                                     Export JSON
                                 </button>
                                 <button class="btn btn-primary" onclick="exportResults('csv')">
-                                    <span>📊</span>
+                                    <span>📋</span>
                                     Export CSV
                                 </button>
                                 <button class="btn btn-secondary" onclick="resetAnalysis()">
@@ -1254,7 +1283,7 @@
                 <div class="sidebar">
                     <!-- Live Statistics -->
                     <div class="sidebar-card">
-                        <h3>📊 Live Analytics</h3>
+                        <h3>📊 Session Analytics</h3>
                         <div class="live-stats">
                             <div class="live-stat">
                                 <div class="live-stat-value" id="filesScanned">0</div>
@@ -1273,6 +1302,18 @@
                                 <div class="live-stat-label">Risk Score</div>
                             </div>
                         </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.7rem; color: var(--gray-light); text-align: center;">
+                            ⓘ Statistics reset on page refresh
+                        </div>
+                        <button onclick="clearAllStatistics()" 
+                                style="margin-top: 1rem; padding: 0.5rem 1rem; background: rgba(239, 68, 68, 0.1); 
+                                       border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; border-radius: 6px; 
+                                       cursor: pointer; font-size: 0.8rem; width: 100%; transition: all 0.3s ease;"
+                                onmouseover="this.style.background='rgba(239, 68, 68, 0.2)'"
+                                onmouseout="this.style.background='rgba(239, 68, 68, 0.1)'"
+                                title="Statistics reset on page refresh">
+                            🗑️ Clear Session Stats
+                        </button>
                     </div>
 
                     <!-- Supported Languages -->
@@ -1293,16 +1334,16 @@
 
                     <!-- Detection Capabilities -->
                     <div class="sidebar-card">
-                        <h3>🔍 Detection Engine</h3>
+                        <h3>🔍 Code Security Analysis</h3>
                         <ul style="list-style: none; color: var(--gray-light); font-size: 0.9rem; line-height: 1.8;">
-                            <li>🚨 Code injection patterns</li>
+                            <li>🚨 Code injection detection</li>
                             <li>🔑 Hardcoded credentials</li>
-                            <li>⚡ Command injection</li>
-                            <li>🌐 XSS vulnerabilities</li>
-                            <li>🗄️ SQL injection</li>
-                            <li>🔒 Crypto weaknesses</li>
-                            <li>💾 Memory safety</li>
-                            <li>🛡️ Authentication flaws</li>
+                            <li>⚡ Command injection analysis</li>
+                            <li>🌐 XSS vulnerability patterns</li>
+                            <li>🗄️ SQL injection detection</li>
+                            <li>🔒 Cryptographic weaknesses</li>
+                            <li>💾 Memory safety analysis</li>
+                            <li>🛡️ Authentication vulnerabilities</li>
                         </ul>
                     </div>
                 </div>
@@ -1311,10 +1352,10 @@
             <!-- Features Section -->
             <section id="features" class="features-section">
                 <div class="section-header">
-                    <h2 class="section-title">Advanced Detection Toolkit</h2>
+                    <h2 class="section-title">Code Security Analysis Toolkit</h2>
                     <p class="section-subtitle">
-                        Comprehensive security analysis powered by machine learning algorithms, 
-                        pattern recognition, and industry-standard vulnerability databases.
+                        Comprehensive static code analysis powered by advanced pattern matching, 
+                        vulnerability detection algorithms, and secure coding best practices databases.
                     </p>
                 </div>
 
@@ -1378,9 +1419,9 @@
             <!-- Statistics Section -->
             <section id="stats" class="stats-section">
                 <div class="section-header">
-                    <h2 class="section-title">Platform Intelligence</h2>
+                    <h2 class="section-title">Code Analysis Platform Metrics</h2>
                     <p class="section-subtitle">
-                        Trusted by security teams worldwide for comprehensive vulnerability detection and code analysis.
+                        Trusted by development teams worldwide for comprehensive code vulnerability detection and static security analysis.
                     </p>
                 </div>
 
@@ -1406,11 +1447,22 @@
         </div>
     </main>
 
+    <!-- PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
     <script>
-        // Global variables
+        // Global variables with session storage (resets on page refresh)
         let selectedFiles = [];
         let scanResults = [];
         let totalScanned = 0;
+        let totalIssuesFound = 0;
+        let totalScanTime = 0;
+
+        // Initialize application
+        function initializeApp() {
+            updateHeaderStats();
+            updateLiveStats();
+        }
 
         // Initialize particle system
         function createParticle() {
@@ -1537,12 +1589,12 @@
             const progressText = document.getElementById('progressText');
             
             const messages = [
-                'Initializing security analysis...',
-                'Parsing source code structure...',
-                'Analyzing vulnerability patterns...',
-                'Cross-referencing security databases...',
+                'Initializing intelligence analysis...',
+                'Parsing source code with AI...',
+                'Analyzing threat intelligence patterns...',
+                'Cross-referencing security intelligence...',
                 'Generating threat assessment...',
-                'Compiling security report...'
+                'Compiling intelligence report...'
             ];
 
             const progressInterval = setInterval(() => {
@@ -1626,7 +1678,6 @@
 
         function showResults() {
             // Update statistics
-            totalScanned += selectedFiles.length;
             updateStats();
             
             // Show results
@@ -1639,15 +1690,33 @@
         }
 
         function updateStats() {
-            document.getElementById('filesScanned').textContent = totalScanned;
+            // Update session statistics (in-memory only)
+            totalScanned += selectedFiles.length;
+            totalIssuesFound += scanResults.length;
+            totalScanTime += 1.2; // Average scan time
+            
+            // Update displays
+            updateHeaderStats();
+            updateLiveStats();
+        }
+
+        function updateHeaderStats() {
             document.getElementById('headerScanned').textContent = totalScanned;
-            document.getElementById('issuesFound').textContent = scanResults.length;
+        }
+
+        function updateLiveStats() {
+            document.getElementById('filesScanned').textContent = totalScanned;
+            document.getElementById('issuesFound').textContent = scanResults.length || totalIssuesFound;
             document.getElementById('scanTime').textContent = '1.2s';
             document.getElementById('riskScore').textContent = calculateRiskScore();
         }
 
         function calculateRiskScore() {
-            if (scanResults.length === 0) return '0';
+            if (scanResults.length === 0) {
+                // If no current results, calculate from session totals
+                const avgIssuesPerScan = totalScanned > 0 ? totalIssuesFound / totalScanned : 0;
+                return avgIssuesPerScan > 0 ? Math.min(avgIssuesPerScan * 2, 10).toFixed(1) : '0';
+            }
             
             let score = 0;
             scanResults.forEach(issue => {
@@ -1778,14 +1847,19 @@
             if (scanResults.length === 0) return;
 
             const timestamp = new Date().toISOString();
-            const filename = `codeguard_security_report_${timestamp.split('T')[0]}.${format}`;
+            const filename = `codeguard_security_report_${timestamp.split('T')[0]}`;
+            
+            if (format === 'pdf') {
+                generatePDFReport(filename);
+                return;
+            }
             
             let content = '';
             
             if (format === 'json') {
                 content = JSON.stringify({
                     timestamp,
-                    platform: 'CodeGuard Enterprise Security Platform',
+                    platform: 'CodeGuard Intelligence Platform',
                     files_analyzed: selectedFiles.map(f => f.name),
                     total_issues: scanResults.length,
                     risk_score: calculateRiskScore(),
@@ -1808,11 +1882,315 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = filename;
+            a.download = `${filename}.${format}`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
             URL.revokeObjectURL(url);
+        }
+
+        function generatePDFReport(filename) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            let yPosition = 30; // Start with proper margin from top
+            const pageWidth = doc.internal.pageSize.width;
+            const pageHeight = doc.internal.pageSize.height;
+            const margin = 20;
+            const contentWidth = pageWidth - (margin * 2);
+            
+            // Helper function to check if we need a new page
+            function checkNewPage(nextHeight = 10) {
+                if (yPosition + nextHeight > pageHeight - 40) { // More bottom margin
+                    doc.addPage();
+                    yPosition = 30; // Start lower on new pages
+                    return true;
+                }
+                return false;
+            }
+            
+            // Header with CodeGuard branding
+            function addHeader() {
+                // Background gradient effect (simulated with rectangles)
+                doc.setFillColor(10, 10, 35);
+                doc.rect(0, 0, pageWidth, 55, 'F'); // Slightly taller header
+                
+                // CodeGuard Logo (using code brackets instead of emoji)
+                doc.setFontSize(20);
+                doc.setTextColor(0, 217, 255);
+                doc.setFont('courier', 'bold');
+                doc.text('</>', margin, 28); // Moved down slightly
+                
+                doc.setFontSize(28);
+                doc.setFont('helvetica', 'bold');
+                doc.text('CodeGuard', margin + 20, 28); // Moved down slightly
+                
+                // Subtitle
+                doc.setFontSize(12);
+                doc.setTextColor(148, 163, 184);
+                doc.text('Secure coding for the better tech', margin + 20, 38); // Moved down slightly
+                
+                // Date and time
+                const now = new Date();
+                const dateStr = now.toLocaleDateString('en-US', { 
+                    year: 'numeric', month: 'long', day: 'numeric',
+                    hour: '2-digit', minute: '2-digit'
+                });
+                doc.setFontSize(10);
+                doc.setTextColor(100, 100, 100);
+                doc.text(`Generated: ${dateStr}`, pageWidth - margin - 60, 28); // Moved down slightly
+                
+                // Separator line
+                doc.setDrawColor(0, 217, 255);
+                doc.setLineWidth(0.5);
+                doc.line(margin, 48, pageWidth - margin, 48); // Moved down slightly
+                
+                return 65; // Return more space for content
+            }
+            
+            // Report Title and Summary
+            yPosition = addHeader();
+            yPosition += 10; // Add more space after header
+            
+            doc.setFontSize(22);
+            doc.setTextColor(0, 0, 0);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Code Security Analysis Report', margin, yPosition);
+            yPosition += 20; // More space after title
+            
+            // Executive Summary Box
+            doc.setFillColor(240, 248, 255);
+            doc.setDrawColor(0, 217, 255);
+            doc.roundedRect(margin, yPosition, contentWidth, 35, 3, 3, 'FD');
+            
+            doc.setFontSize(14);
+            doc.setTextColor(0, 0, 0);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Executive Summary', margin + 10, yPosition + 12);
+            
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(11);
+            
+            const critical = scanResults.filter(r => ['Critical', 'High'].includes(r.severity)).length;
+            const medium = scanResults.filter(r => r.severity === 'Medium').length;
+            const low = scanResults.filter(r => ['Low', 'Info'].includes(r.severity)).length;
+            const riskScore = calculateRiskScore();
+            
+            const summaryText = `Analysis of ${selectedFiles.length} file(s) revealed ${scanResults.length} security issues. ` +
+                              `Risk Score: ${riskScore}/10 (${critical} Critical/High, ${medium} Medium, ${low} Low)`;
+            
+            const splitSummary = doc.splitTextToSize(summaryText, contentWidth - 20);
+            doc.text(splitSummary, margin + 10, yPosition + 22);
+            yPosition += 45;
+            
+            // Statistics Section
+            checkNewPage(60);
+            
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(0, 0, 0);
+            doc.text('Analysis Statistics', margin, yPosition);
+            yPosition += 12;
+            
+            // Statistics boxes
+            const statBoxWidth = (contentWidth - 20) / 3;
+            const statBoxHeight = 25;
+            
+            // Critical Issues Box
+            doc.setFillColor(239, 68, 68, 0.1);
+            doc.setDrawColor(239, 68, 68);
+            doc.roundedRect(margin, yPosition, statBoxWidth, statBoxHeight, 2, 2, 'FD');
+            
+            doc.setFontSize(20);
+            doc.setTextColor(239, 68, 68);
+            doc.setFont('helvetica', 'bold');
+            doc.text(critical.toString(), margin + statBoxWidth/2 - 5, yPosition + 12);
+            
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text('Critical/High', margin + statBoxWidth/2 - 15, yPosition + 20);
+            
+            // Medium Issues Box
+            doc.setFillColor(245, 158, 11, 0.1);
+            doc.setDrawColor(245, 158, 11);
+            doc.roundedRect(margin + statBoxWidth + 10, yPosition, statBoxWidth, statBoxHeight, 2, 2, 'FD');
+            
+            doc.setFontSize(20);
+            doc.setTextColor(245, 158, 11);
+            doc.setFont('helvetica', 'bold');
+            doc.text(medium.toString(), margin + statBoxWidth + 10 + statBoxWidth/2 - 5, yPosition + 12);
+            
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text('Medium', margin + statBoxWidth + 10 + statBoxWidth/2 - 10, yPosition + 20);
+            
+            // Low Issues Box
+            doc.setFillColor(16, 185, 129, 0.1);
+            doc.setDrawColor(16, 185, 129);
+            doc.roundedRect(margin + (statBoxWidth + 10) * 2, yPosition, statBoxWidth, statBoxHeight, 2, 2, 'FD');
+            
+            doc.setFontSize(20);
+            doc.setTextColor(16, 185, 129);
+            doc.setFont('helvetica', 'bold');
+            doc.text(low.toString(), margin + (statBoxWidth + 10) * 2 + statBoxWidth/2 - 5, yPosition + 12);
+            
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text('Low/Info', margin + (statBoxWidth + 10) * 2 + statBoxWidth/2 - 10, yPosition + 20);
+            
+            yPosition += 35;
+            
+            // File Analysis Details
+            checkNewPage(30);
+            
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(0, 0, 0);
+            doc.text('Files Analyzed', margin, yPosition);
+            yPosition += 12;
+            
+            selectedFiles.forEach((file, index) => {
+                checkNewPage(8);
+                doc.setFontSize(11);
+                doc.setFont('helvetica', 'normal');
+                doc.setTextColor(50, 50, 50);
+                
+                const fileSize = (file.size / 1024).toFixed(1);
+                const fileInfo = `${index + 1}. ${file.name} (${fileSize} KB)`;
+                doc.text(fileInfo, margin + 10, yPosition);
+                yPosition += 6;
+            });
+            
+            yPosition += 10;
+            
+            // Vulnerability Details
+            if (scanResults.length > 0) {
+                checkNewPage(30);
+                
+                doc.setFontSize(16);
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(0, 0, 0);
+                doc.text('Vulnerability Details', margin, yPosition);
+                yPosition += 15;
+                
+                scanResults.forEach((vuln, index) => {
+                    checkNewPage(50);
+                    
+                    // Vulnerability box
+                    const vulnBoxHeight = 45;
+                    let boxColor, textColor;
+                    
+                    switch(vuln.severity) {
+                        case 'Critical':
+                        case 'High':
+                            boxColor = [254, 242, 242];
+                            textColor = [239, 68, 68];
+                            break;
+                        case 'Medium':
+                            boxColor = [255, 251, 235];
+                            textColor = [245, 158, 11];
+                            break;
+                        default:
+                            boxColor = [240, 253, 250];
+                            textColor = [16, 185, 129];
+                    }
+                    
+                    doc.setFillColor(...boxColor);
+                    doc.setDrawColor(...textColor);
+                    doc.roundedRect(margin, yPosition, contentWidth, vulnBoxHeight, 3, 3, 'FD');
+                    
+                    // Vulnerability title
+                    doc.setFontSize(12);
+                    doc.setFont('helvetica', 'bold');
+                    doc.setTextColor(...textColor);
+                    doc.text(`${index + 1}. ${vuln.issue}`, margin + 10, yPosition + 12);
+                    
+                    // Severity badge
+                    doc.setFontSize(9);
+                    doc.setTextColor(255, 255, 255);
+                    doc.setFillColor(...textColor);
+                    doc.roundedRect(pageWidth - margin - 40, yPosition + 5, 30, 8, 2, 2, 'F');
+                    doc.text(vuln.severity.toUpperCase(), pageWidth - margin - 35, yPosition + 10);
+                    
+                    // Line number
+                    doc.setFontSize(10);
+                    doc.setTextColor(100, 100, 100);
+                    doc.text(`Line ${vuln.line}`, margin + 10, yPosition + 20);
+                    
+                    // Code snippet
+                    doc.setFont('courier', 'normal');
+                    doc.setFontSize(9);
+                    doc.setTextColor(0, 0, 0);
+                    const codeText = doc.splitTextToSize(vuln.code, contentWidth - 40);
+                    doc.text(codeText, margin + 10, yPosition + 28);
+                    
+                    // Description
+                    doc.setFont('helvetica', 'normal');
+                    doc.setFontSize(9);
+                    doc.setTextColor(75, 85, 99);
+                    const descText = doc.splitTextToSize(vuln.description || 'Security vulnerability detected', contentWidth - 20);
+                    doc.text(descText, margin + 10, yPosition + 37);
+                    
+                    yPosition += vulnBoxHeight + 10;
+                });
+            }
+            
+            // Recommendations Section
+            checkNewPage(40);
+            
+            doc.setFontSize(16);
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(0, 0, 0);
+            doc.text('Security Recommendations', margin, yPosition);
+            yPosition += 15;
+            
+            const recommendations = [
+                '1. Implement proper input validation and sanitization for all user inputs',
+                '2. Use parameterized queries to prevent SQL injection attacks',
+                '3. Store sensitive configuration data in environment variables',
+                '4. Implement Content Security Policy (CSP) headers for web applications',
+                '5. Regular security audits and penetration testing',
+                '6. Keep all dependencies and frameworks up to date',
+                '7. Implement proper error handling to avoid information disclosure'
+            ];
+            
+            doc.setFontSize(11);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(50, 50, 50);
+            
+            recommendations.forEach(rec => {
+                checkNewPage(8);
+                const splitRec = doc.splitTextToSize(rec, contentWidth - 20);
+                doc.text(splitRec, margin + 10, yPosition);
+                yPosition += splitRec.length * 6 + 3;
+            });
+            
+            // Footer
+            function addFooter() {
+                const footerY = pageHeight - 20;
+                
+                doc.setDrawColor(0, 217, 255);
+                doc.setLineWidth(0.3);
+                doc.line(margin, footerY - 5, pageWidth - margin, footerY - 5);
+                
+                doc.setFontSize(8);
+                doc.setTextColor(100, 100, 100);
+                doc.text('CodeGuard Intelligence Platform', margin, footerY);
+                doc.text(`Page ${doc.internal.getCurrentPageInfo().pageNumber}`, pageWidth - margin - 20, footerY);
+                
+                doc.setTextColor(0, 217, 255);
+                doc.text('Confidential Intelligence Report', pageWidth/2 - 35, footerY);
+            }
+            
+            // Add footer to all pages
+            const pageCount = doc.internal.getNumberOfPages();
+            for (let i = 1; i <= pageCount; i++) {
+                doc.setPage(i);
+                addFooter();
+            }
+            
+            // Save the PDF
+            doc.save(`${filename}.pdf`);
         }
 
         function resetAnalysis() {
@@ -1828,6 +2206,18 @@
             exportBtn.style.display = 'none';
             
             resetUploadZone();
+            updateLiveStats(); // Update live stats to show current session data
+        }
+
+        function clearAllStatistics() {
+            // Clear session storage (in-memory only)
+            totalScanned = 0;
+            totalIssuesFound = 0;
+            totalScanTime = 0;
+            
+            // Update displays
+            updateHeaderStats();
+            updateLiveStats();
         }
 
         // Smooth scrolling
@@ -1844,6 +2234,9 @@
                 }
             });
         });
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeApp);
     </script>
 </body>
 </html>
