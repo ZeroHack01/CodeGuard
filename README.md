@@ -387,48 +387,170 @@ curl -X GET http://localhost:5000/api/download/json/scan_results_2024
 
 </div>
 
-### 🔧 **Advanced Detection Capabilities**
+### **🔧 Advanced Detection Capabilities**
 
-<details>
-<summary><b>🛡️ Security Pattern Categories</b></summary>
+<div align="center">
 
-#### **Injection Vulnerabilities**
-- SQL Injection (SQLi)
-- NoSQL Injection  
-- LDAP Injection
-- Command Injection
-- Code Injection
-- XPath Injection
+### **📊 Security Pattern Detection - Circular Analysis**
 
-#### **Authentication & Authorization**
-- Hardcoded credentials
-- Weak password policies
-- Session management flaws
-- JWT token vulnerabilities
-- OAuth implementation issues
+<table>
+<tr>
+<td align="center" width="20%">
 
-#### **Data Protection**
-- Sensitive data exposure
-- Insufficient encryption
-- Weak cryptographic storage
-- Data validation bypass
-- Information leakage
+**🐍 Python**
 
-#### **Memory Safety (C/C++)**
-- Buffer overflows
-- Memory leaks
-- Use-after-free
-- Double-free vulnerabilities
-- Stack smashing
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#3776ab" stroke-width="8" fill="none"
+          stroke-dasharray="238" stroke-dashoffset="12" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#3776ab">95%</text>
+</svg>
 
-#### **Web Application Security**
-- Cross-Site Scripting (XSS)
-- Cross-Site Request Forgery (CSRF)
-- DOM-based vulnerabilities
-- Insecure redirects
-- HTTP header injection
+**Django, Flask, FastAPI**
+*eval(), exec(), pickle.loads()*
 
-</details>
+</td>
+<td align="center" width="20%">
+
+**🟨 JavaScript**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#f7df1e" stroke-width="8" fill="none"
+          stroke-dasharray="226" stroke-dashoffset="25" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">90%</text>
+</svg>
+
+**React, Vue, Angular**
+*innerHTML, eval(), XSS*
+
+</td>
+<td align="center" width="20%">
+
+**⚡ TypeScript**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#3178c6" stroke-width="8" fill="none"
+          stroke-dasharray="221" stroke-dashoffset="30" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#3178c6">88%</text>
+</svg>
+
+**Angular, React TS**
+*Type safety bypass*
+
+</td>
+<td align="center" width="20%">
+
+**🔵 C/C++**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#00599c" stroke-width="8" fill="none"
+          stroke-dasharray="214" stroke-dashoffset="37" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#00599c">85%</text>
+</svg>
+
+**Native, Qt, Boost**
+*gets(), strcpy(), malloc()*
+
+</td>
+<td align="center" width="20%">
+
+**☕ Java**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#ed8b00" stroke-width="8" fill="none"
+          stroke-dasharray="206" stroke-dashoffset="45" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#ed8b00">82%</text>
+</svg>
+
+**Spring, Struts, JSF**
+*Runtime.exec(), reflection*
+
+</td>
+</tr>
+<tr>
+<td align="center" width="20%">
+
+**🐘 PHP**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#777bb4" stroke-width="8" fill="none"
+          stroke-dasharray="201" stroke-dashoffset="50" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#777bb4">80%</text>
+</svg>
+
+**Laravel, Symfony**
+*eval(), shell_exec(), include()*
+
+</td>
+<td align="center" width="20%">
+
+**💎 Ruby**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#cc342d" stroke-width="8" fill="none"
+          stroke-dasharray="196" stroke-dashoffset="55" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#cc342d">78%</text>
+</svg>
+
+**Rails, Sinatra, Hanami**
+*eval(), system(), send()*
+
+</td>
+<td align="center" width="20%">
+
+**🐹 Go**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#00add8" stroke-width="8" fill="none"
+          stroke-dasharray="188" stroke-dashoffset="63" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#00add8">75%</text>
+</svg>
+
+**Gin, Echo, Fiber**
+*exec.Command(), unsafe.Pointer*
+
+</td>
+<td align="center" width="20%">
+
+**🌐 HTML/CSS**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#e34f26" stroke-width="8" fill="none"
+          stroke-dasharray="176" stroke-dashoffset="75" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#e34f26">70%</text>
+</svg>
+
+**Bootstrap, Tailwind**
+*Script injection, protocols*
+
+</td>
+<td align="center" width="20%">
+
+### **🎯 Total**
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+  <circle cx="50" cy="50" r="40" stroke="#10b981" stroke-width="8" fill="none"
+          stroke-dasharray="208" stroke-dashoffset="43" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+  <text x="50" y="55" text-anchor="middle" font-size="16" font-weight="bold" fill="#10b981">83%</text>
+</svg>
+
+**Multi-Framework**
+*248 Security Patterns*
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
