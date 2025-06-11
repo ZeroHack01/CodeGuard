@@ -271,77 +271,20 @@ curl -X POST -F "file=@security_test.py" \
 
 ### **📊 Language Support Coverage**
 
-<table>
-<tr>
-<td align="center" width="60%">
-
-<svg width="350" height="350" viewBox="0 0 350 350">
-  <!-- Background circle -->
-  <circle cx="175" cy="175" r="140" fill="none" stroke="#e5e7eb" stroke-width="2"/>
-  
-  <!-- Python: 25% (largest slice) -->
-  <path d="M 175,175 L 175,35 A 140,140 0 0,1 297,119 Z" fill="#3776ab" stroke="white" stroke-width="2"/>
-  
-  <!-- JavaScript: 20% -->
-  <path d="M 175,175 L 297,119 A 140,140 0 0,1 315,175 Z" fill="#f7df1e" stroke="white" stroke-width="2"/>
-  
-  <!-- TypeScript: 15% -->
-  <path d="M 175,175 L 315,175 A 140,140 0 0,1 297,231 Z" fill="#3178c6" stroke="white" stroke-width="2"/>
-  
-  <!-- C/C++: 12% -->
-  <path d="M 175,175 L 297,231 A 140,140 0 0,1 231,297 Z" fill="#00599c" stroke="white" stroke-width="2"/>
-  
-  <!-- Java: 10% -->
-  <path d="M 175,175 L 231,297 A 140,140 0 0,1 175,315 Z" fill="#ed8b00" stroke="white" stroke-width="2"/>
-  
-  <!-- PHP: 8% -->
-  <path d="M 175,175 L 175,315 A 140,140 0 0,1 119,297 Z" fill="#777bb4" stroke="white" stroke-width="2"/>
-  
-  <!-- Ruby: 6% -->
-  <path d="M 175,175 L 119,297 A 140,140 0 0,1 53,231 Z" fill="#cc342d" stroke="white" stroke-width="2"/>
-  
-  <!-- Go: 4% -->
-  <path d="M 175,175 L 53,231 A 140,140 0 0,1 35,175 Z" fill="#00add8" stroke="white" stroke-width="2"/>
-  
-  <!-- HTML/CSS: 3% -->
-  <path d="M 175,175 L 35,175 A 140,140 0 0,1 53,119 Z" fill="#e34f26" stroke="white" stroke-width="2"/>
-  
-  <!-- Other: 2% -->
-  <path d="M 175,175 L 53,119 A 140,140 0 0,1 175,35 Z" fill="#6b7280" stroke="white" stroke-width="2"/>
-  
-  <!-- Center title -->
-  <text x="175" y="165" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Language Support</text>
-  <text x="175" y="185" text-anchor="middle" font-size="14" fill="#666">Coverage</text>
-</svg>
-
-</td>
-<td align="center" width="40%">
-
-### **🏷️ Legend**
-
-<table align="left">
-<tr><td><span style="color: #3776ab;">●</span> **Python**</td><td>**25%**</td></tr>
-<tr><td><span style="color: #f7df1e;">●</span> **JavaScript**</td><td>**20%**</td></tr>
-<tr><td><span style="color: #3178c6;">●</span> **TypeScript**</td><td>**15%**</td></tr>
-<tr><td><span style="color: #00599c;">●</span> **C/C++**</td><td>**12%**</td></tr>
-<tr><td><span style="color: #ed8b00;">●</span> **Java**</td><td>**10%**</td></tr>
-<tr><td><span style="color: #777bb4;">●</span> **PHP**</td><td>**8%**</td></tr>
-<tr><td><span style="color: #cc342d;">●</span> **Ruby**</td><td>**6%**</td></tr>
-<tr><td><span style="color: #00add8;">●</span> **Go**</td><td>**4%**</td></tr>
-<tr><td><span style="color: #e34f26;">●</span> **HTML/CSS**</td><td>**3%**</td></tr>
-<tr><td><span style="color: #6b7280;">●</span> **Other**</td><td>**2%**</td></tr>
-</table>
-
-**📊 Total Coverage: 248+ Patterns**
-**🛡️ Security Effectiveness: 95%**
-**⚡ Average Scan Time: <2s**
-
-</td>
-</tr>
-</table>
-
-</div>
-
+![Language Support](https://quickchart.io/chart?c={
+  type:'pie',
+  data:{
+    labels:['Python','JavaScript','TypeScript','C/C++','Java','PHP','Ruby','Go','HTML/CSS','Other'],
+    datasets:[{
+      data:[25,20,15,12,10,8,6,4,3,2],
+      backgroundColor:['#3776ab','#f7df1e','#3178c6','#00599c','#ed8b00','#777bb4','#cc342d','#00add8','#e34f26','#6b7280']
+    }]
+  },
+  options:{
+    title:{display:true,text:'Language Support Coverage'},
+    legend:{position:'right'}
+  }
+})
 ---
 
 ### **📋 Detailed Language Support**
