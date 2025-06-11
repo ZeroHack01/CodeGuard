@@ -206,43 +206,6 @@ docker rm codeguard-scanner        # Remove container
 
 ## 📖 **Usage Guide**
 
-### 🖥️ **Platform-Specific Instructions**
-
-<table>
-<tr>
-<td width="33%" align="center">
-
-### 🪟 **Windows**
-1. **Launch** browser → `localhost:5000`
-2. **Upload** code files via drag-drop
-3. **Execute** security analysis  
-4. **Review** vulnerability report
-5. **Export** results if needed
-
-</td>
-<td width="33%" align="center">
-
-### 🍎 **macOS**
-1. **Navigate** to `localhost:5000`
-2. **Drop** files into upload zone
-3. **Run** comprehensive scan
-4. **Analyze** results with recommendations  
-5. **Download** reports for review
-
-</td>
-<td width="33%" align="center">
-
-### 🐧 **Linux**
-1. **Access** via browser: `localhost:5000`
-2. **Select** files for scanning
-3. **Process** vulnerability analysis
-4. **Examine** color-coded results
-5. **Generate** exportable reports
-
-</td>
-</tr>
-</table>
-
 ### 💻 **Command Line Interface**
 
 ```python
@@ -252,7 +215,7 @@ from scanner import scan_file
 # Single file analysis
 results = scan_file('vulnerable_app.py')
 for vulnerability in results:
-    print(f"🚨 Line {vulnerability['line']}: {vulnerability['issue']}")
+    print(f" Line {vulnerability['line']}: {vulnerability['issue']}")
     print(f"   Severity: {vulnerability['severity']}")
 ```
 
@@ -271,7 +234,7 @@ curl -X POST -F "file=@security_test.py" \
 
 ### **📊 Language Support Distribution**
 
-![Language Support Chart](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/main/screenshots/chart.png)
+(https://raw.githubusercontent.com/ZeroHack01/CodeGuard/main/screenshots/chart.png)
 
 *Visual distribution of CodeGuard's language detection capabilities*
 
