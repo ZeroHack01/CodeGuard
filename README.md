@@ -269,7 +269,7 @@ curl -X POST -F "file=@security_test.py" \
 
 <div align="center">
 
-**📊 Total: 9 Languages | 248+ Security Patterns | 83% Average Coverage**
+**📊 Total: 9 Languages | 75+ Security Patterns | 83% Average Coverage**
 
 </div>
 
