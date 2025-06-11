@@ -204,62 +204,100 @@ docker rm codeguard-scanner        # Remove container
 
 ---
 
-## 🌐 **Supported Languages & Frameworks**
+## 📖 **Usage Guide**
 
-<div align="center">
+### 🖥️ **Platform-Specific Instructions**
 
-**📈 Framework Support**
+<table>
+<tr>
+<td width="33%" align="center">
 
-| Language | Popular Frameworks |
-|----------|-------------------|
-| **Python** | Django, Flask, FastAPI |
-| **JavaScript** | React, Vue, Angular |
-| **TypeScript** | Angular, React TS |
-| **C/C++** | Qt, Boost, Native |
-| **Java** | Spring, Struts, JSF |
-| **PHP** | Laravel, Symfony |
-| **Ruby** | Rails, Sinatra |
-| **Go** | Gin, Echo, Fiber |
-| **HTML/CSS** | Bootstrap, Tailwind |
+### 🪟 **Windows**
+1. **Launch** browser → `localhost:5000`
+2. **Upload** code files via drag-drop
+3. **Execute** security analysis  
+4. **Review** vulnerability report
+5. **Export** results if needed
+
+</td>
+<td width="33%" align="center">
+
+### 🍎 **macOS**
+1. **Navigate** to `localhost:5000`
+2. **Drop** files into upload zone
+3. **Run** comprehensive scan
+4. **Analyze** results with recommendations  
+5. **Download** reports for review
+
+</td>
+<td width="33%" align="center">
+
+### 🐧 **Linux**
+1. **Access** via browser: `localhost:5000`
+2. **Select** files for scanning
+3. **Process** vulnerability analysis
+4. **Examine** color-coded results
+5. **Generate** exportable reports
 
 </td>
 </tr>
 </table>
 
+### 💻 **Command Line Interface**
+
+```python
+# Python Integration
+from scanner import scan_file
+
+# Single file analysis
+results = scan_file('vulnerable_app.py')
+for vulnerability in results:
+    print(f"🚨 Line {vulnerability['line']}: {vulnerability['issue']}")
+    print(f"   Severity: {vulnerability['severity']}")
+```
+
+```bash
+# REST API Usage
+curl -X POST -F "file=@security_test.py" \
+     -H "Content-Type: multipart/form-data" \
+     http://localhost:5000/api/scan
+```
+
+---
+
+## 🌐 **Supported Languages & Frameworks**
+
+<div align="center">
+
+### **📊 Language Support Distribution**
+
+![Language Support Chart](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/main/screenshots/chart.png)
+
+*Visual distribution of CodeGuard's language detection capabilities*
+
 </div>
 
 ---
 
-### **🔧 Security Patterns Detected**
+### **📋 Language Details**
 
-<div align="center">
-
-| Language | File Types | Critical Vulnerabilities | Detection Rate |
-|----------|------------|-------------------------|----------------|
-| 🐍 **Python** | `.py .pyw .pyc` | eval(), exec(), pickle.loads(), os.system() | ![95%](https://img.shields.io/badge/95%25-success-brightgreen) |
-| 🟨 **JavaScript** | `.js .jsx .mjs` | innerHTML, eval(), document.write() | ![90%](https://img.shields.io/badge/90%25-success-green) |
-| ⚡ **TypeScript** | `.ts .tsx .d.ts` | Type bypass, XSS vulnerabilities | ![88%](https://img.shields.io/badge/88%25-success-green) |
-| 🔵 **C/C++** | `.c .cpp .h .hpp` | gets(), strcpy(), buffer overflows | ![85%](https://img.shields.io/badge/85%25-important-yellow) |
-| ☕ **Java** | `.java .jar .class` | Runtime.exec(), reflection, deserialization | ![82%](https://img.shields.io/badge/82%25-important-yellow) |
-| 🐘 **PHP** | `.php .phtml .php3` | eval(), shell_exec(), SQL injection | ![80%](https://img.shields.io/badge/80%25-important-yellow) |
-| 💎 **Ruby** | `.rb .rbw .rake` | eval(), system(), command injection | ![78%](https://img.shields.io/badge/78%25-warning-orange) |
-| 🐹 **Go** | `.go .mod .sum` | exec.Command(), unsafe operations | ![75%](https://img.shields.io/badge/75%25-warning-orange) |
-| 🌐 **HTML/CSS** | `.html .htm .css` | Script injection, unsafe protocols | ![70%](https://img.shields.io/badge/70%25-critical-red) |
-
-</div>
+| Language | Extensions | Security Patterns | Framework Support |
+|----------|------------|-------------------|-------------------|
+| 🐍 **Python** | `.py .pyw .pyc` | eval(), exec(), os.system(), pickle.loads() | Django, Flask, FastAPI |
+| 🟨 **JavaScript** | `.js .jsx .mjs` | innerHTML, eval(), document.write() | React, Vue, Angular |
+| ⚡ **TypeScript** | `.ts .tsx .d.ts` | Type safety issues, XSS vulnerabilities | Angular, React TS |
+| 🔵 **C/C++** | `.c .cpp .h .hpp` | gets(), strcpy(), malloc(), system() | Native, Qt, Boost |
+| ☕ **Java** | `.java .jar .class` | Runtime.exec(), reflection, deserialization | Spring, Struts, JSF |
+| 🐘 **PHP** | `.php .phtml .php3` | eval(), shell_exec(), include(), mysqli | Laravel, Symfony, CodeIgniter |
+| 💎 **Ruby** | `.rb .rbw .rake` | eval(), system(), send(), constantize() | Rails, Sinatra, Hanami |
+| 🐹 **Go** | `.go .mod .sum` | exec.Command(), unsafe.Pointer, sql.Query | Gin, Echo, Fiber |
+| 🌐 **HTML/CSS** | `.html .htm .css` | Script injection, unsafe protocols | Bootstrap, Tailwind |
 
 ---
 
 <div align="center">
 
-### **📊 Summary Statistics**
-
-![Total Languages](https://img.shields.io/badge/Languages-9-blue?style=flat-square)
-![Security Patterns](https://img.shields.io/badge/Patterns-248+-green?style=flat-square)
-![Average Coverage](https://img.shields.io/badge/Coverage-83%25-brightgreen?style=flat-square)
-![Scan Speed](https://img.shields.io/badge/Speed-<2s-lightblue?style=flat-square)
-
-**🛡️ CodeGuard provides comprehensive security analysis across all major programming languages**
+**📊 Total: 9 Languages | 248+ Security Patterns | 83% Average Coverage**
 
 </div>
 
