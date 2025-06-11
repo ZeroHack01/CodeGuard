@@ -617,11 +617,10 @@ mypy scanner/ --strict
 
 This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file for complete terms.
 
-### 📜 **Third-Party Libraries**
-- Flask (BSD-3-Clause)
-- Werkzeug (BSD-3-Clause) 
-- Jinja2 (BSD-3-Clause)
-- Click (BSD-3-Clause)
+### 📦 **Dependencies**
+- **Flask** - Web framework for the interface
+- **Werkzeug** - WSGI web application library
+- **Other dependencies** - See `requirements.txt` for complete list
 
 ---
 
