@@ -18,7 +18,7 @@
 
 **🔍 Advanced static code analysis tool for comprehensive security vulnerability detection**
 
-[🚀 Quick Start](#installation) • [📱 Live Demo](#web-interface-preview) • [📖 Documentation](#usage-guide) • [🔧 API Reference](#api-reference) • [🌐 Languages](#supported-languages--frameworks)
+[🚀 Installation](#installation) • [📱 Web Interface](#web-interface-preview) • [📖 Usage Guide](#usage-guide) • [🔧 API Reference](#api-reference) • [🌐 Languages](#supported-languages-and-frameworks)
 
 </div>
 
@@ -206,6 +206,17 @@ docker rm codeguard-scanner        # Remove container
 
 ## 📖 **Usage Guide**
 
+### 🐧 **Linux**
+1. **Access** via browser: `localhost:5000`
+2. **Select** files for scanning
+3. **Process** vulnerability analysis
+4. **Examine** color-coded results
+5. **Generate** exportable reports
+
+</td>
+</tr>
+</table>
+
 ### 💻 **Command Line Interface**
 
 ```python
@@ -215,7 +226,7 @@ from scanner import scan_file
 # Single file analysis
 results = scan_file('vulnerable_app.py')
 for vulnerability in results:
-    print(f" Line {vulnerability['line']}: {vulnerability['issue']}")
+    print(f"🚨 Line {vulnerability['line']}: {vulnerability['issue']}")
     print(f"   Severity: {vulnerability['severity']}")
 ```
 
@@ -228,7 +239,7 @@ curl -X POST -F "file=@security_test.py" \
 
 ---
 
-## 🌐 **Supported Languages & Frameworks**
+## 🌐 **Supported Languages and Frameworks**
 
 <div align="center">
 
