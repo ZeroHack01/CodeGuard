@@ -13,7 +13,6 @@
 ![Python](https://img.shields.io/badge/PYTHON-3.8+-00FF88?style=for-the-badge&labelColor=0a0a23&color=1a1a2e)
 ![License](https://img.shields.io/badge/LICENSE-MIT-FF3366?style=for-the-badge&labelColor=0a0a23&color=1a1a2e)
 ![Stars](https://img.shields.io/github/stars/ZeroHack01/CodeGuard?style=for-the-badge&labelColor=0a0a23&color=1a1a2e&label=STARS)
-![Downloads](https://img.shields.io/github/downloads/ZeroHack01/CodeGuard/total?style=for-the-badge&labelColor=0a0a23&color=1a1a2e)
 
 <br/>
 
