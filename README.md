@@ -158,10 +158,8 @@ cd CodeGuard
 docker build -t codeguard .
 docker run -d -p 5000:5000 --name codeguard codeguard
 
-# Stop container
+# Container management
 docker stop codeguard
-
-# Remove container
 docker rm codeguard
 ```
 
@@ -173,37 +171,33 @@ docker rm codeguard
 
 ## 📖 **Usage Guide**
 
-### 🖥️ **Web Interface**
+### 🖥️ **Web Interface Preview**
 
 <div align="center">
 
-**CodeGuard Dashboard Interface**
+![CodeGuard Dashboard](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/master/screenshots/dashboard.png)
 
-*Upload files using drag-and-drop or file selection. The dashboard shows real-time scanning progress and provides access to all security analysis features.*
-
-> **📸 To add actual screenshots:**
-> 1. Run CodeGuard: `python app.py`
-> 2. Open `http://localhost:5000` in your browser
-> 3. Take a screenshot of the dashboard
-> 4. Save as `screenshots/dashboard.png` in your repository
-> 5. Update this README to include: `![CodeGuard Dashboard](screenshots/dashboard.png)`
+*CodeGuard web dashboard with file upload interface*
 
 </div>
 
-### 📊 **Scan Results Interface**
+### 📤 **File Upload Interface**
 
 <div align="center">
 
-**Real-time Vulnerability Detection Results**
+![File Upload](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/master/screenshots/upload.png)
 
-*Interactive results page showing security issues with severity levels, code snippets, line numbers, and detailed fix recommendations.*
+*Drag and drop file upload with multi-language support*
 
-> **📸 To add scan results screenshot:**
-> 1. Upload a test file with known vulnerabilities
-> 2. Complete a security scan
-> 3. Take a screenshot of the results page
-> 4. Save as `screenshots/results.png` in your repository
-> 5. Update this README to include: `![Scan Results](screenshots/results.png)`
+</div>
+
+### 📊 **Scan Results Example**
+
+<div align="center">
+
+![Scan Results](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/master/screenshots/results.png)
+
+*Real-time vulnerability detection results with severity levels and line-by-line analysis*
 
 </div>
 
@@ -386,35 +380,6 @@ EXPORT_FORMATS=json,csv   # Available export formats
 ```
 
 </details>
-
----
-
-## 📸 **Adding Screenshots**
-
-To update this README with actual screenshots of your CodeGuard application:
-
-### Step 1: Create Screenshots Directory
-```bash
-mkdir screenshots
-```
-
-### Step 2: Take Screenshots
-1. **Dashboard Screenshot:**
-   - Run: `python app.py`
-   - Open: `http://localhost:5000`
-   - Take screenshot and save as: `screenshots/dashboard.png`
-
-2. **Results Screenshot:**
-   - Upload a test file with vulnerabilities
-   - Complete scan and view results
-   - Take screenshot and save as: `screenshots/results.png`
-
-### Step 3: Update README
-Replace the placeholder text with actual image references:
-```markdown
-![CodeGuard Dashboard](screenshots/dashboard.png)
-![Scan Results](screenshots/results.png)
-```
 
 ---
 
