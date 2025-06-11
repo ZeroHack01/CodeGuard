@@ -243,8 +243,6 @@ curl -X POST -F "file=@security_test.py" \
 
 <div align="center">
 
-### **📊 Language Support Distribution**
-
 ![</>](https://raw.githubusercontent.com/ZeroHack01/CodeGuard/main/screenshots/chart.png)
 
 *Visual distribution of CodeGuard's language detection capabilities*
