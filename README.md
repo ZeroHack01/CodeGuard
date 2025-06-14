@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Animated Wave Header -->
+  <!-- Animated Wave Header -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=280&section=header&text=CodeGuard&fontSize=80&fontColor=fff&animation=twinkling&fontAlignY=35&desc=🛡️%20Security%20Code%20Scanner&descAlignY=55&descSize=28" />
 
 <br/>
