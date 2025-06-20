@@ -53,54 +53,53 @@ jobs:
           
       - name: Run Security Analysis
         id: scan
-        env:
-          CODEGUARD_CONFIG: |
-            api:
-              url: ${{ env.CODEGUARD_API_URL }}
-              key: ${{ env.CODEGUARD_API_KEY }}
-              timeout: ${{ env.SCAN_TIMEOUT }}
-            scan:
-              analysis_depth: comprehensive
-              enable_ml: true
-              enable_dataflow: true
-              enable_plugins: true
-              severity_threshold: Low
-              include_patterns:
-                - "**/*.py"
-                - "**/*.js"
-                - "**/*.jsx"
-                - "**/*.ts"
-                - "**/*.tsx"
-                - "**/*.java"
-                - "**/*.c"
-                - "**/*.cpp"
-                - "**/*.php"
-                - "**/*.go"
-                - "**/*.rs"
-                - "**/*.swift"
-                - "**/*.kt"
-              exclude_patterns:
-                - "**/node_modules/**"
-                - "**/vendor/**"
-                - "**/test/**"
-                - "**/tests/**"
-                - "**/__pycache__/**"
-                - "**/target/**"
-                - "**/build/**"
-                - "**/dist/**"
-            output:
-              formats: [sarif, json, pdf]
-              sarif_file: codeguard-results.sarif
-              json_file: codeguard-results.json
-              pdf_file: codeguard-report.pdf
-            compliance:
-              frameworks: [OWASP-Top-10, SANS-25, PCI-DSS]
-              fail_on_critical: true
-              fail_on_high: false
-              max_critical: 0
-              max_high: 5
         run: |
-          echo "$CODEGUARD_CONFIG" > .codeguard.yml
+          cat > .codeguard.yml << 'EOF'
+          api:
+            url: ${{ env.CODEGUARD_API_URL }}
+            key: ${{ env.CODEGUARD_API_KEY }}
+            timeout: ${{ env.SCAN_TIMEOUT }}
+          scan:
+            analysis_depth: comprehensive
+            enable_ml: true
+            enable_dataflow: true
+            enable_plugins: true
+            severity_threshold: Low
+            include_patterns:
+              - "**/*.py"
+              - "**/*.js"
+              - "**/*.jsx"
+              - "**/*.ts"
+              - "**/*.tsx"
+              - "**/*.java"
+              - "**/*.c"
+              - "**/*.cpp"
+              - "**/*.php"
+              - "**/*.go"
+              - "**/*.rs"
+              - "**/*.swift"
+              - "**/*.kt"
+            exclude_patterns:
+              - "**/node_modules/**"
+              - "**/vendor/**"
+              - "**/test/**"
+              - "**/tests/**"
+              - "**/__pycache__/**"
+              - "**/target/**"
+              - "**/build/**"
+              - "**/dist/**"
+          output:
+            formats: [sarif, json, pdf]
+            sarif_file: codeguard-results.sarif
+            json_file: codeguard-results.json
+            pdf_file: codeguard-report.pdf
+          compliance:
+            frameworks: [OWASP-Top-10, SANS-25, PCI-DSS]
+            fail_on_critical: true
+            fail_on_high: false
+            max_critical: 0
+            max_high: 5
+          EOF
           
           # Run comprehensive security analysis
           codeguard scan . \
@@ -125,7 +124,6 @@ jobs:
       - name: Generate Security Report Summary
         if: always() && steps.scan.outputs.scan_completed == 'true'
         run: |
-          # Parse JSON results and create summary
           python3 << 'EOF'
           import json
           import os
@@ -142,7 +140,7 @@ jobs:
               md_content = f"""
           ## 🛡️ CodeGuard Security Analysis Results
           
-          **Overall Risk Level:** {risk_assessment.get('overall_risk_level', 'Unknown')}
+          **Overall Risk Level:** {risk_assessment.get('overall_risk_level', 'Unknown')}  
           **Risk Score:** {risk_assessment.get('risk_score', 0):.1f}/10
           
           ### 📊 Vulnerability Summary
@@ -176,7 +174,6 @@ jobs:
               md_content += f"""
           
           ### 📋 Compliance Status
-          
           """
               
               compliance = results.get('compliance_status', {})
@@ -197,8 +194,8 @@ jobs:
           
           ---
           
-          📄 [View Full Report](./security-reports/codeguard-report.pdf)
-          📊 [Download JSON Results](./security-reports/codeguard-results.json)
+          📄 [View Full Report](./security-reports/codeguard-report.pdf)  
+          📊 [Download JSON Results](./security-reports/codeguard-results.json)  
           🔧 [View SARIF Results](./security-reports/codeguard-results.sarif)
           """
               
@@ -428,7 +425,7 @@ codeguard-security-scan:
                   "name": vuln.get('issue', 'Security Issue'),
                   "description": vuln.get('description', ''),
                   "severity": severity_mapping.get(vuln.get('severity'), 'Unknown'),
-                  "confidence": vuln.get('confidence', 0) * 100,
+                  "confidence": "High",
                   "solution": vuln.get('recommendation', ''),
                   "scanner": {
                       "id": "codeguard-enterprise",
