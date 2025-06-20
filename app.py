@@ -138,6 +138,14 @@ class RateLimiter:
             self._requests[identifier].append(now)
             return True
 
+    def remaining(self, identifier: str, max_requests: int, window_seconds: int) -> int:
+        with self._lock:
+            now = time.time()
+            window_start = now - window_seconds
+            while self._requests[identifier] and self._requests[identifier][0] < window_start:
+                self._requests[identifier].popleft()
+            return max_requests - len(self._requests[identifier])
+
 # Initialize global components
 metrics = ApplicationMetrics()
 rate_limiter = RateLimiter()
@@ -158,17 +166,28 @@ def rate_limit_check(f):
         client_ip = get_client_ip()
         
         if not rate_limiter.is_allowed(
-            client_ip, 
-            app.config['RATE_LIMIT_MAX_REQUESTS'], 
+            client_ip,
+            app.config['RATE_LIMIT_MAX_REQUESTS'],
             app.config['RATE_LIMIT_WINDOW']
         ):
             logger.warning(f"Rate limit exceeded for IP: {client_ip}")
-            return jsonify({
+            resp = jsonify({
                 'error': 'Rate limit exceeded',
                 'message': f'Maximum {app.config["RATE_LIMIT_MAX_REQUESTS"]} requests per hour allowed'
-            }), 429
-        
-        return f(*args, **kwargs)
+            })
+            resp.status_code = 429
+            resp.headers['Retry-After'] = str(app.config['RATE_LIMIT_WINDOW'])
+            return resp
+
+        response = f(*args, **kwargs)
+        if hasattr(response, 'headers'):
+            remaining = rate_limiter.remaining(
+                client_ip,
+                app.config['RATE_LIMIT_MAX_REQUESTS'],
+                app.config['RATE_LIMIT_WINDOW']
+            )
+            response.headers['X-RateLimit-Remaining'] = str(remaining)
+        return response
     return decorated_function
 
 def security_headers(f):
@@ -291,10 +310,13 @@ def too_large(e):
 def ratelimit_handler(e):
     """Handle rate limit exceeded"""
     metrics.record_error()
-    return jsonify({
+    resp = jsonify({
         'error': 'Rate limit exceeded',
         'message': 'Too many requests. Please try again later.'
-    }), 429
+    })
+    resp.status_code = 429
+    resp.headers['Retry-After'] = str(app.config['RATE_LIMIT_WINDOW'])
+    return resp
 
 @app.errorhandler(500)
 def internal_error(e):

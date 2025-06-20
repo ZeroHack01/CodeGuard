@@ -231,6 +231,17 @@ class EnterpriseSecurityScanner:
                     'cwe_id': 'CWE-295',
                     'recommendation': 'Always verify SSL certificates or use custom CA bundle if needed',
                     'category': 'crypto'
+                },
+                {
+                    'pattern': r'requests\.(get|post|put|delete)\s*\([^)]*[\'\"]http://',
+                    'issue': 'Insecure HTTP Request',
+                    'severity': 'Medium',
+                    'description': 'HTTP used instead of HTTPS for network request',
+                    'confidence': 0.7,
+                    'owasp_category': 'A08:2021-Software and Data Integrity Failures',
+                    'cwe_id': 'CWE-319',
+                    'recommendation': 'Use HTTPS and verify certificates for all requests',
+                    'category': 'insecure_transport'
                 }
             ],
             
@@ -317,6 +328,17 @@ class EnterpriseSecurityScanner:
                     'recommendation': 'Use crypto.getRandomValues() for cryptographic random numbers',
                     'category': 'crypto'
                 },
+                {
+                    'pattern': r'(fetch|axios\.get)\s*\([^)]*[\'\"]http://',
+                    'issue': 'Insecure HTTP Request',
+                    'severity': 'Medium',
+                    'description': 'HTTP used instead of HTTPS for network request',
+                    'confidence': 0.7,
+                    'owasp_category': 'A08:2021-Software and Data Integrity Failures',
+                    'cwe_id': 'CWE-319',
+                    'recommendation': 'Use HTTPS for all remote requests',
+                    'category': 'insecure_transport'
+                },
                 
                 # URL Manipulation
                 {
@@ -355,6 +377,17 @@ class EnterpriseSecurityScanner:
                     'cwe_id': 'CWE-20',
                     'recommendation': 'Use proper TypeScript types and input validation instead of any',
                     'category': 'type_safety'
+                },
+                {
+                    'pattern': r'(fetch|axios\.get)\s*\([^)]*[\'\"]http://',
+                    'issue': 'Insecure HTTP Request',
+                    'severity': 'Medium',
+                    'description': 'HTTP used instead of HTTPS for network request',
+                    'confidence': 0.7,
+                    'owasp_category': 'A08:2021-Software and Data Integrity Failures',
+                    'cwe_id': 'CWE-319',
+                    'recommendation': 'Use HTTPS for all remote requests',
+                    'category': 'insecure_transport'
                 }
             ],
             

@@ -1528,6 +1528,12 @@
                 { pattern: /Math\.random\s*\(\)/gi, severity: 'Medium', description: 'Weak random number generation' },
                 { pattern: /rand\s*\(\)/gi, severity: 'Medium', description: 'Weak random number generation' }
             ],
+
+            // Insecure Transport
+            insecureTransport: [
+                { pattern: /(fetch|axios\.get)\s*\([^)]*['"]http:\/\//gi, severity: 'Medium', description: 'HTTP used instead of HTTPS for network request' },
+                { pattern: /requests\.(get|post|put|delete)\s*\([^)]*['"]http:\/\//gi, severity: 'Medium', description: 'Python HTTP request without HTTPS' }
+            ],
             
             // Path Traversal
             pathTraversal: [
@@ -1919,7 +1925,8 @@
                 'Private key in source code': 'Private Key Exposure',
                 'Weak cryptographic hash MD5 usage': 'Weak Cryptography (MD5)',
                 'Path traversal pattern detected': 'Path Traversal Vulnerability',
-                'Python pickle deserialization vulnerability': 'Insecure Deserialization'
+                'Python pickle deserialization vulnerability': 'Insecure Deserialization',
+                'HTTP used instead of HTTPS for network request': 'Insecure HTTP Request'
             };
             
             return titles[description] || description;
@@ -2246,6 +2253,12 @@
                     codeExample: 'import bcrypt\nhashed = bcrypt.hashpw(password.encode(), bcrypt.gensalt())',
                     resources: ['https://owasp.org/www-project-cheat-sheets/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html']
                 },
+                'insecureTransport': {
+                    description: 'Unencrypted HTTP traffic exposes sensitive data to interception.',
+                    recommendation: 'Use HTTPS for all network requests and enforce TLS across your applications.',
+                    codeExample: 'fetch("https://example.com/api")\nrequests.get("https://example.com")',
+                    resources: ['https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure']
+                },
                 'pathTraversal': {
                     description: 'Path traversal attacks allow access to files and directories outside the intended scope.',
                     recommendation: 'Validate file paths, use absolute paths, implement proper access controls and sandboxing.',
@@ -2524,6 +2537,7 @@
                     'commandInjection': 'Command Injection',
                     'credentials': 'Credential Exposure',
                     'crypto': 'Cryptographic Issues',
+                    'insecureTransport': 'Insecure Transport',
                     'pathTraversal': 'Path Traversal',
                     'deserialization': 'Insecure Deserialization',
                     'ssrf': 'Server-Side Request Forgery',
